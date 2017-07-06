@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import RecipeTable from './RecipeTable'
+import RecipeTable from '../components/RecipeTable'
 // import FilterableRecipeTable from './FilterableRecipeTable'
 // import SearchBar from './SearchBar'
 // import { Search } from './FilterList'
@@ -446,11 +446,5 @@ class App extends Component {
 	}
 
 }
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
-
 
 export default App;
