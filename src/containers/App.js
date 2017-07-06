@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import RecipeTable from '../components/RecipeTable'
-// import FilterableRecipeTable from './FilterableRecipeTable'
-// import SearchBar from './SearchBar'
-// import { Search } from './FilterList'
-// import { SkiDayCount } from './SkiDayCount'
-// import React from 'react'
+import PropTypes from 'prop-types'
 
 class App extends Component {
 	constructor(props) {
