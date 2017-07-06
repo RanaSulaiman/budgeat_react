@@ -4,14 +4,12 @@ import RecipeRow from './RecipeRow'
 class RecipeTable extends Component {
   render(){
     return (
-      <table>
-        <tbody>
+      <div>
           {this.props.recipes.map((recipe,i)=>
-            <RecipeRow key={i}
-              {...recipe}/>
+            <RecipeRow key={i} {...recipe}/>
           )}
-        </tbody>
-      </table>
+      </div>
+      // </table>
     );
   }
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import RecipeTable from './RecipeTable'
 // import FilterableRecipeTable from './FilterableRecipeTable'
 // import SearchBar from './SearchBar'
@@ -15,8 +16,8 @@ class App extends Component {
           id: 1,
           recipe_id: "723984",
           title: "Cabbage Salad with Peanuts",
-          image: "cabbage-salad-with-peanuts-723984.jpg",
-          source_uri: "https://spoonacular.com/recipeImages/Garlicky-Pasta-with-Swiss-Chard-and-Beans-482788.jpg",
+          image: "https://spoonacular.com/recipeImages/Garlicky-Pasta-with-Swiss-Chard-and-Beans-482788.jpg",
+          source_uri: "http://naturallyella.com/cabbage-salad-with-peanuts/",
           source_name: "Naturally Ella",
           prep_time: 15,
           cook_time: 0,
@@ -413,7 +414,7 @@ class App extends Component {
           recipe_id: "199544",
           title: "Stir Fried Pork and Cabbage with Black Bean Sauce",
           image: "Stir-Fried-Pork-and-Cabbage-with-Black-Bean-Sauce-199544.jpg",
-          c: "http://www.seriouseats.com/recipes/2010/12/stir-fried-pork-cabbage-black-bean-sauce-recipe.html",
+          source_uri: "http://www.seriouseats.com/recipes/2010/12/stir-fried-pork-cabbage-black-bean-sauce-recipe.html",
           source_name: "Serious Eats",
           prep_time: null,
           cook_time: null,
@@ -443,6 +444,13 @@ class App extends Component {
 			</div>
 		);
 	}
+
 }
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
+
 
 export default App;
