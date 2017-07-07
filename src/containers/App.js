@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import RecipeTable from '../components/RecipeTable'
+import ButtonCost from '../components/ButtonCost'
+
 import PropTypes from 'prop-types'
 
 class App extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
+      costFilterText: "0",
 			allRecipes: [
   			{
           id: 1,
@@ -25,8 +28,8 @@ class App extends Component {
           servings: 2,
           price_serving: 115.09,
           cuisines: "[]",
-          // dish_type: "["side dish", "lunch", "main course", "salad", "main dish", "dinner"]",
-          // diets: "["gluten free", "vegan"]",
+          dish_type: ["side dish", "lunch", "main course", "salad", "main dish", "dinner"],
+          diets: ["gluten free", "vegan"],
           calories: null
           },
           {
@@ -337,7 +340,7 @@ class App extends Component {
           vegan: "f",
           servings: 4,
           price_serving: 165.49,
-          cuisines: "[]",
+          cuisines: [],
           // dish_type: "["side dish", "lunch", "main course", "main dish", "dinner"]",
           // diets: "[]",
           calories: null
@@ -428,15 +431,27 @@ class App extends Component {
         }
   		]
       // filteredRecipes: this.allRecipes
+    };
+
+    this.handleCostFilterSelect = this.handleCostFilterSelect.bind(this);
+  }
+
+  // handleCostFilterSelect(costSelect) {
+  //   this.costFilterText = costSelect
+	// }
+
+    handleCostFilterSelect(costFilterText) {
+      this.setState({
+        costFilterText : costFilterText
+      });
     }
-	}
 
 	render() {
 		return (
       <div>
-        {/* <FilterableRecipeTable recipes={this.state.allRecipes}/> */}
-        <RecipeTable recipes={this.state.allRecipes}/>
-        {/* <RecipeRow reccipe={this.state}/> */}
+        <ButtonCost onCostFilterSelect={this.handleCostFilterSelect}/>
+        <h1>{this.costFilterText}</h1>
+        <RecipeTable recipes={this.state.allRecipes} costFilterText={this.state.costFilterText}/>
 			</div>
 		);
 	}
