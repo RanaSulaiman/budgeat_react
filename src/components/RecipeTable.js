@@ -18,7 +18,6 @@ class RecipeTable extends Component {
             <RecipeRow key={i} {...recipe}/>
           )}
       </div>
-      // </table>
     );
   }
 

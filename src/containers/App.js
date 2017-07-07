@@ -450,7 +450,7 @@ class App extends Component {
 		return (
       <div>
         <ButtonCost onCostFilterSelect={this.handleCostFilterSelect}/>
-        <h1>{this.costFilterText}</h1>
+        {/* <h1>{this.state.costFilterText}</h1> */}
         <RecipeTable recipes={this.state.allRecipes} costFilterText={this.state.costFilterText}/>
 			</div>
 		);
