@@ -3,17 +3,12 @@ import ReactDOM from 'react-dom'
 import Foundation from 'react-foundation'
 import PropTypes from 'prop-types'
 // import ReactRouter from 'react-router-dom'
-import { Router, Route, Switch } from 'react-router-dom'
+// import { Router, Route, Switch } from 'react-router-dom';
+// import { Link } from 'react-router-link'
+// var { Router, Route, IndexRoute, Link, browserHistory } = ReactRouter
+
 
 import FilterableRecipeTable from '../components/FilterableRecipeTable'
-import Nav from '../components/Nav'
-
-
-
-
-
-// var Router = require('react-router').Router
-// var Route = require('react-router').Route
 
 var allRecipes = [
 	{
@@ -439,9 +434,7 @@ var allRecipes = [
 class App extends Component {
 	render() {
 		return (
-      <div>
         <FilterableRecipeTable recipes={allRecipes}/>
-			</div>
 		);
 	}
 
