@@ -15,9 +15,11 @@ class ButtonTime extends Component {
     <select id = "time-filter"
       onChange={this.handleTimeFilterChange}>
       <option defaultValue value="0">All</option>
-      <option value= '15'>less than 15</option>
-      <option value= '30' >less than 30</option>
-      <option value= '50'>less than 50</option>
+      <option value='15'>less than 15 min</option>
+      <option value='30'>less than 30 min</option>
+      <option value='60'>less than 1 hour</option>
+      <option value='120'>less than 2 hours</option>
+      <option value='240'>less than 4 hours</option>
     </select>
   );
   }

@@ -19,9 +19,10 @@ class ButtonCuisine extends Component {
       <option value='european'>european</option>
       <option value='mexican'>mexican</option>
       <option value='italian'>italian</option>
+      <option value='greek'>greek</option>
+      <option value='european'>european</option>
       <option value='indian'>indian</option>
       <option value='mediterranean'>mediterranean</option>
-
     </select>
   );
   }

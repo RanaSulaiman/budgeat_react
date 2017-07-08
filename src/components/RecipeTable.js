@@ -3,33 +3,46 @@ import RecipeRow from './RecipeRow'
 
 class RecipeTable extends Component {
   render(){
-    var costFilteredList = [];
-    var timeCostFilteredList = [];
-    console.log("xxx " + this.props.costFilterText);
+    var cuisineFilteredList = [];
+    var costCuisineFilteredList = [];
+    var timeCostCuisineFilteredList = [];
+    // console.log("xxx " + this.props.costFilterText);
 
-    if(this.props.costFilterText !== "0") {
+    if(this.props.cuisineFilterText !== "") {
       this.props.recipes.forEach((recipe) =>{
-        if(recipe.price_serving <= Number(this.props.costFilterText)){
-          costFilteredList.push(recipe);
+        console.log("cuisine filter: " + this.props.cuisineFilterText);
+        console.log("recipe cuisines: " + recipe.cuisines);
+        if(recipe.cuisines.includes(this.props.cuisineFilterText)){
+          cuisineFilteredList.push(recipe);
         }
       }); //forEach
     } else {
-      costFilteredList = this.props.recipes;
+      cuisineFilteredList = this.props.recipes;
+    }
+
+    if(this.props.costFilterText !== "0") {
+      cuisineFilteredList.forEach((recipe) =>{
+        if(recipe.price_serving <= Number(this.props.costFilterText)){
+          costCuisineFilteredList.push(recipe);
+        }
+      }); //forEach
+    } else {
+      costCuisineFilteredList = cuisineFilteredList;
     }
 
     if (this.props.timeFilterText !== "0") {
-        costFilteredList.forEach((recipe) =>{
+        costCuisineFilteredList.forEach((recipe) =>{
           if(recipe.ready_time <= Number(this.props.timeFilterText)){
-            timeCostFilteredList.push(recipe);
+            timeCostCuisineFilteredList.push(recipe);
           }
         }); //forEach
     } else {
-      timeCostFilteredList = costFilteredList;
+      timeCostCuisineFilteredList = costCuisineFilteredList;
     }
 
     return (
       <div>
-          {timeCostFilteredList.map((recipe,i)=>
+          {timeCostCuisineFilteredList.map((recipe,i)=>
             <RecipeRow key={i} {...recipe}/>
           )}
       </div>

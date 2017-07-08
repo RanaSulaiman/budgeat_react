@@ -33,8 +33,8 @@ class App extends Component {
           servings: 2,
           price_serving: 115.09,
           cuisines: "[]",
-          dish_type: ["side dish", "lunch", "main course", "salad", "main dish", "dinner"],
-          diets: ["gluten free", "vegan"],
+          // dish_type: ["side dish", "lunch", "main course", "salad", "main dish", "dinner"],
+          // diets: ["gluten free", "vegan"],
           calories: null
           },
           {
@@ -55,7 +55,7 @@ class App extends Component {
           price_serving: 183.15,
           cuisines: "[]",
           // dish_type: "["side dish", "lunch", "main course", "main dish", "dinner"]",
-          diets: "[]",
+          // diets: "[]",
           calories: null
           },
           {
@@ -116,7 +116,7 @@ class App extends Component {
           vegan: "f",
           servings: 4,
           price_serving: 228.57,
-          cuisines: ["american"],
+          cuisines: "[american]",
           // dish_type: "["lunch", "soup", "main course", "main dish", "dinner"]",
           // diets: "["gluten free", "dairy free", "vegetarian"],
           calories: null
@@ -137,7 +137,7 @@ class App extends Component {
           vegan: "f",
           servings: 2,
           price_serving: 269.28,
-          cuisines: [],
+          cuisines: "[]",
           // dish_type: "["lunch", "main course", "main dish", "dinner"]",
           // diets: "["caveman", "gluten free", "dairy free", "primal", "whole 30"]",
           calories: null
@@ -158,7 +158,7 @@ class App extends Component {
           vegan: "f",
           servings: 2,
           price_serving: 266.53,
-          cuisines: ["mexican"],
+          cuisines: "[mexican]",
           // dish_type: "["antipasti", "lunch", "main course", "starter", "snack", "appetizer", "main dish", "antipasto" ]",
           diets: "[]",
           calories: null
@@ -179,7 +179,7 @@ class App extends Component {
           vegan: "f",
           servings: 2,
           price_serving: 920.91,
-          cuisines: ["mexican"],
+          cuisines: "mexican",
           // dish_type: "["lunch", "main course", "main dish", "dinner"]",
           // diets: "["gluten free", "pescatarian"]",
           calories: null
@@ -200,7 +200,7 @@ class App extends Component {
           vegan: "f",
           servings: 4,
           price_serving: 153.54,
-          cuisines: ["greek", "mediterranean", "european"],
+          cuisines: "greek, mediterranean, european",
           // dish_type: "["side dish", "lunch", "main course", "salad", "main dish", "dinner"]",
           // diets: "["gluten free", "vegetarian"]",
           calories: null
@@ -345,7 +345,7 @@ class App extends Component {
           vegan: "f",
           servings: 4,
           price_serving: 165.49,
-          cuisines: [],
+          cuisines: "[]",
           // dish_type: "["side dish", "lunch", "main course", "main dish", "dinner"]",
           // diets: "[]",
           calories: null
@@ -366,7 +366,7 @@ class App extends Component {
           vegan: "f",
           servings: 4,
           price_serving: 358.86,
-          // cuisines: "[]",
+          cuisines: "[]",
           // dish_type: "["lunch", "main course", "main dish", "dinner"]",
           // diets: "["gluten free", "dairy free", "fodmap friendly", "pescatarian"]",
           calories: null
@@ -387,7 +387,7 @@ class App extends Component {
           vegan: "f",
           servings: 2,
           price_serving: 199.08,
-          // cuisines: "["mexican"]",
+          cuisines: "[mexican]",
           // dish_type: "["lunch", "main course", "main dish", "dinner"]",
           // diets: "["gluten free", "dairy free"]",
           calories: null
@@ -408,7 +408,7 @@ class App extends Component {
           vegan: "f",
           servings: 2,
           price_serving: 178.75,
-          // cuisines: "["greek", "mediterranean", "european"]",
+          cuisines: "[greek, mediterranean, european]",
           // dish_type: "["side dish", "lunch", "main course", "salad", "main dish", "dinner"]",
           // diets: "["gluten free", "primal", "ketogenic"]",
           calories: null
@@ -471,7 +471,6 @@ class App extends Component {
 		return (
       <div>
 				<ButtonCuisine onCuisineFilterSelect={this.handleCuisineFilterSelect}/>
-
         <ButtonCost onCostFilterSelect={this.handleCostFilterSelect}/>
 				<ButtonTime onTimeFilterSelect={this.handleTimeFilterSelect}/>
 
