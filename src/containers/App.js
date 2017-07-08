@@ -9,9 +9,6 @@ import FilterableRecipeTable from '../components/FilterableRecipeTable'
 import Nav from '../components/Nav'
 
 
-
-
-
 // var Router = require('react-router').Router
 // var Route = require('react-router').Route
 
