@@ -9,3 +9,11 @@ body {
   width: 200px;
 
 }
+
+.nav {
+  display: flex;
+}
+
+.active {
+  font-weight: bold;
+}

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Foundation from 'react-foundation'
+
 
 class ButtonCost extends Component {
   constructor(props) {
@@ -12,6 +14,7 @@ class ButtonCost extends Component {
 
   render() {
     return (
+    // <div className="button-dropdown-arrows-example">
     <select id = "cost-filter"
       onChange={this.handleCostFilterChange}>
       <option defaultValue value="0">All</option>
@@ -21,6 +24,7 @@ class ButtonCost extends Component {
       <option value='500'>less than $5</option>
       <option value='1000'>less than $10</option>
     </select>
+  // </div>
   );
   }
 

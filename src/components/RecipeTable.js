@@ -6,12 +6,12 @@ class RecipeTable extends Component {
     var cuisineFilteredList = [];
     var costCuisineFilteredList = [];
     var timeCostCuisineFilteredList = [];
-    // console.log("xxx " + this.props.costFilterText);
+    // console.log("xxx cuisineFilterText: " + this.props.cuisineFilterText);
 
     if(this.props.cuisineFilterText !== "") {
       this.props.recipes.forEach((recipe) =>{
-        console.log("cuisine filter: " + this.props.cuisineFilterText);
-        console.log("recipe cuisines: " + recipe.cuisines);
+        // console.log("cuisine filter: " + this.props.cuisineFilterText);
+        // console.log("recipe cuisines: " + recipe.cuisines);
         if(recipe.cuisines.includes(this.props.cuisineFilterText)){
           cuisineFilteredList.push(recipe);
         }
