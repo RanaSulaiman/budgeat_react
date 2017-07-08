@@ -14,7 +14,7 @@ class ButtonCost extends Component {
     return (
     <select id = "cost-filter"
       onChange={this.handleCostFilterChange}>
-      <option defaultValue value="0">Select Cost</option>
+      <option defaultValue value="0">All</option>
       <option value= '100'>less than 100</option>
       <option value= '155' >less than 155</option>
       <option value= '200'>less than 200</option>

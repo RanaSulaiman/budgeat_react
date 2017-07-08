@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import RecipeTable from '../components/RecipeTable'
 import ButtonCost from '../components/ButtonCost'
+import ButtonTime from '../components/ButtonTime'
 
 import PropTypes from 'prop-types'
 
@@ -10,6 +11,7 @@ class App extends Component {
 		super(props)
 		this.state = {
       costFilterText: "0",
+			timeFilterText: "0",
 			allRecipes: [
   			{
           id: 1,
@@ -434,6 +436,8 @@ class App extends Component {
     };
 
     this.handleCostFilterSelect = this.handleCostFilterSelect.bind(this);
+
+		this.handleTimeFilterSelect = this.handleTimeFilterSelect.bind(this);
   }
 
   // handleCostFilterSelect(costSelect) {
@@ -446,12 +450,21 @@ class App extends Component {
       });
     }
 
+		handleTimeFilterSelect(timeFilterText) {
+			this.setState({
+				timeFilterText : timeFilterText
+			});
+		}
+
+
 	render() {
 		return (
       <div>
         <ButtonCost onCostFilterSelect={this.handleCostFilterSelect}/>
-        {/* <h1>{this.state.costFilterText}</h1> */}
-        <RecipeTable recipes={this.state.allRecipes} costFilterText={this.state.costFilterText}/>
+				<ButtonTime onTimeFilterSelect={this.handleTimeFilterSelect}/>
+        <RecipeTable recipes={this.state.allRecipes} costFilterText={this.state.costFilterText}
+				timeFilterText={this.state.timeFilterText}/>
+
 			</div>
 		);
 	}

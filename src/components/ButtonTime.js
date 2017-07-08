@@ -14,10 +14,10 @@ class ButtonTime extends Component {
     return (
     <select id = "time-filter"
       onChange={this.handleTimeFilterChange}>
-      <option defaultValue value="0">Select Time</option>
-      <option value= '15'>less than 100</option>
-      <option value= '30' >less than 155</option>
-      <option value= '50'>less than 200</option>
+      <option defaultValue value="0">All</option>
+      <option value= '15'>less than 15</option>
+      <option value= '30' >less than 30</option>
+      <option value= '50'>less than 50</option>
     </select>
   );
   }

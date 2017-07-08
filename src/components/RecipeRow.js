@@ -6,7 +6,7 @@ export const RecipeRow = (recipe) => (
     // <td>{recipe.title}</td>
     // <td><img src= {recipe.image} className = "image"/></td>
   // </tr>
-  <p>{recipe.title}<img src= {recipe.image} className = "image"/></p>
+  <p>{recipe.title} [{recipe.price_serving} cent] [{recipe.ready_time} min]<img src= {recipe.image} className = "image"/></p>
 )
 
 
