@@ -1,8 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, Switch, IndexRoute, Link, browserHistory } from 'react-router-dom';
+
 import './index.css';
-import App from '../src/containers/App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import App from '../src/containers/App';
+import Home from '../src/components/Home';
+
+// var { Router, Route, IndexRoute, Link, browserHistory } = ReactRouter
+
+ReactDOM.render (
+  // ( <Router>
+  //   <Route path="/" component={Home}>
+  //   </Route>
+  // </Router>
+  // )
+  <App/>,
+  document.getElementById('root')
+);
 registerServiceWorker();
