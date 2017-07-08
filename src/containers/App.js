@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom'
 import RecipeTable from '../components/RecipeTable'
 import ButtonCost from '../components/ButtonCost'
 import ButtonTime from '../components/ButtonTime'
+import ButtonCuisine from '../components/ButtonCuisine'
+
 
 import PropTypes from 'prop-types'
 
@@ -10,7 +12,8 @@ class App extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-      costFilterText: "0",
+      cuisineFilterText: "",
+			costFilterText: "0",
 			timeFilterText: "0",
 			allRecipes: [
   			{
@@ -113,9 +116,9 @@ class App extends Component {
           vegan: "f",
           servings: 4,
           price_serving: 228.57,
-          // cuisines: "["american"]",
+          cuisines: ["american"],
           // dish_type: "["lunch", "soup", "main course", "main dish", "dinner"]",
-          // diets: "["gluten free", "dairy free", "vegetarian"]",
+          // diets: "["gluten free", "dairy free", "vegetarian"],
           calories: null
           },
           {
@@ -134,7 +137,7 @@ class App extends Component {
           vegan: "f",
           servings: 2,
           price_serving: 269.28,
-          cuisines: "[]",
+          cuisines: [],
           // dish_type: "["lunch", "main course", "main dish", "dinner"]",
           // diets: "["caveman", "gluten free", "dairy free", "primal", "whole 30"]",
           calories: null
@@ -155,7 +158,7 @@ class App extends Component {
           vegan: "f",
           servings: 2,
           price_serving: 266.53,
-          // cuisines: "["mexican"]",
+          cuisines: ["mexican"],
           // dish_type: "["antipasti", "lunch", "main course", "starter", "snack", "appetizer", "main dish", "antipasto" ]",
           diets: "[]",
           calories: null
@@ -176,7 +179,7 @@ class App extends Component {
           vegan: "f",
           servings: 2,
           price_serving: 920.91,
-          // cuisines: "["mexican"]",
+          cuisines: ["mexican"],
           // dish_type: "["lunch", "main course", "main dish", "dinner"]",
           // diets: "["gluten free", "pescatarian"]",
           calories: null
@@ -197,7 +200,7 @@ class App extends Component {
           vegan: "f",
           servings: 4,
           price_serving: 153.54,
-          // cuisines: "["greek", "mediterranean", "european"]",
+          cuisines: ["greek", "mediterranean", "european"],
           // dish_type: "["side dish", "lunch", "main course", "salad", "main dish", "dinner"]",
           // diets: "["gluten free", "vegetarian"]",
           calories: null
@@ -435,6 +438,8 @@ class App extends Component {
       // filteredRecipes: this.allRecipes
     };
 
+		this.handleCuisineFilterSelect = this.handleCuisineFilterSelect.bind(this);
+
     this.handleCostFilterSelect = this.handleCostFilterSelect.bind(this);
 
 		this.handleTimeFilterSelect = this.handleTimeFilterSelect.bind(this);
@@ -443,6 +448,12 @@ class App extends Component {
   // handleCostFilterSelect(costSelect) {
   //   this.costFilterText = costSelect
 	// }
+
+		handleCuisineFilterSelect(cuisineFilterText) {
+			this.setState({
+				cuisineFilterText : cuisineFilterText
+			});
+		}
 
     handleCostFilterSelect(costFilterText) {
       this.setState({
@@ -456,13 +467,15 @@ class App extends Component {
 			});
 		}
 
-
 	render() {
 		return (
       <div>
+				<ButtonCuisine onCuisineFilterSelect={this.handleCuisineFilterSelect}/>
+
         <ButtonCost onCostFilterSelect={this.handleCostFilterSelect}/>
 				<ButtonTime onTimeFilterSelect={this.handleTimeFilterSelect}/>
-        <RecipeTable recipes={this.state.allRecipes} costFilterText={this.state.costFilterText}
+
+        <RecipeTable recipes={this.state.allRecipes} costFilterText={this.state.costFilterText} cuisineFilterText={this.state.cuisineFilterText}
 				timeFilterText={this.state.timeFilterText}/>
 
 			</div>
