@@ -28,9 +28,6 @@ class FilterableRecipeTable extends Component {
 		this.handleTimeFilterSelect = this.handleTimeFilterSelect.bind(this);
   }
 
-  // handleCostFilterSelect(costSelect) {
-  //   this.costFilterText = costSelect
-	// }
 
 		handleCuisineFilterSelect(cuisineFilterText) {
 			this.setState({

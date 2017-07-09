@@ -16,32 +16,10 @@ import Nav from '../components/Nav'
 import Home from '../components/Home'
 import Contact from '../components/Contact'
 import FilterRecipes from '../components/FilterRecipes'
+import RecipeDetails from '../components/RecipeDetails'
 
 import api from '../utils/api'
 
-// var api = require('../utils/api');
-// var axios = require('axios');
-//
-// componentDidMount() {
-//     axios.get(`https://localhost/4000/recipes.json`)
-//       .then(res => {
-//         const posts = res.data.data.children.map(obj => obj.data);
-//
-//       });
-//   }
-
-// componentDidMount() {
-//     api.fetchRecipeDetails()
-// 			.then(function(recipe) {
-// 				consloe.log(recipe);
-// 		})
-// }
-
-// on mount, fetch all products and stored them as this component's state
-// componentDidMount () {
-//     this.serverRequest = $.get("https://localhost/4000/recipes")
-//
-// }
 
 class App extends Component {
 	render() {
@@ -55,6 +33,8 @@ class App extends Component {
 								<Route exact path='/' component={Home} />
 								<Route exact path='/Contact' component={Contact} />
 								<Route exact path='/FilterRecipes' component={FilterRecipes} />
+                <Route exact path='/Recipe/:id' component={RecipeDetails} />
+
 								{/* <Route render={function () {
 									return <p>Not Found</p>
 								}} /> */}
