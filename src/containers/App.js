@@ -9,6 +9,35 @@ import PropTypes from 'prop-types'
 
 import FilterableRecipeTable from '../components/FilterableRecipeTable'
 
+import api from '../utils/api'
+
+// var api = require('../utils/api');
+
+// var axios = require('axios');
+//
+// componentDidMount() {
+//     axios.get(`https://localhost/4000/recipes.json`)
+//       .then(res => {
+//         const posts = res.data.data.children.map(obj => obj.data);
+//
+//       });
+//   }
+
+
+
+// componentDidMount() {
+//     api.fetchRecipeDetails()
+// 			.then(function(recipe) {
+// 				consloe.log(recipe);
+// 		})
+// }
+
+// on mount, fetch all products and stored them as this component's state
+// componentDidMount () {
+//     this.serverRequest = $.get("https://localhost/4000/recipes")
+//
+// }
+
 var allRecipes = [
 	{
 		id: 1,

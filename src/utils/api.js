@@ -1,8 +1,8 @@
 var axios = require('axios');
 
 module.exports = {
-  fetchRecipeDetails: function() {
-    var railsUri = "https://localhost/4000/recipes"
+  fetchRecipeDetails: function(recipes) {
+    var railsUri = "http://localhost/4000/recipes"
 
     return axios.get(railsUri)
     .then(function (response) {
@@ -12,7 +12,7 @@ module.exports = {
 
 }
 
-fetchRecipeDetails
-  .then(function(){
-    
-  })
+// fetchRecipeDetails
+//   .then(function(){
+//
+//   })
