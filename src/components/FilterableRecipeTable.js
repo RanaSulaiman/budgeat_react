@@ -1,19 +1,16 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import RecipeTable from '../components/RecipeTable'
-import ButtonCost from '../components/ButtonCost'
-import ButtonTime from '../components/ButtonTime'
-import ButtonCuisine from '../components/ButtonCuisine'
 // import ReactRouter from 'react-router-dom'
 import { Router, Route, Switch } from 'react-router-dom'
-import Nav from '../components/Nav'
-
 import Foundation from 'react-foundation'
 import PropTypes from 'prop-types'
 
-// var Router = require('react-router').Router
-// var Route = require('react-router').Route
-
+import Nav from './Nav'
+// import RecipeTable from './RecipeTable'
+import ButtonCost from './ButtonCost'
+import ButtonTime from './ButtonTime'
+import ButtonCuisine from './ButtonCuisine'
+import RecipeTable from './RecipeTable'
 
 class FilterableRecipeTable extends Component {
 	constructor(props) {
@@ -56,16 +53,11 @@ class FilterableRecipeTable extends Component {
 	render() {
 		return (
       <div>
-				{/* <Router> */}
-					{/* <Nav /> */}
-
 				<ButtonCuisine onCuisineFilterSelect={this.handleCuisineFilterSelect}/>
         <ButtonCost onCostFilterSelect={this.handleCostFilterSelect}/>
 				<ButtonTime onTimeFilterSelect={this.handleTimeFilterSelect}/>
 
         <RecipeTable recipes={this.props.recipes} cuisineFilterText={this.state.cuisineFilterText} costFilterText={this.state.costFilterText} timeFilterText={this.state.timeFilterText}/>
-				{/* </Router> */}
-
 			</div>
 		);
 	}

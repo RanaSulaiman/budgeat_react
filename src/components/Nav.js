@@ -1,14 +1,9 @@
-import React, { Component } from 'react';
-import { Router, Route, Switch, IndexRoute, Link, browserHistory } from 'react-router-dom';
-
-// import { Link } from ('react-router-dom').Link;
+// import React, { Component } from 'react';
+// import { Router, Route, Switch, IndexRoute, Link, browserHistory } from 'react-router-dom';
 
 // import { Link } from 'react-router-link'
 // import {Home} from './Home'
 
-// var Link = require('react-router-dom').Link;
-// var NavLink = require('react-router-dom').NavLink;
-//
 // const Home = () => (
 //   <div>
 //     <h1>Welcome to the Tornadoes Website!</h1>
@@ -30,18 +25,27 @@ import { Router, Route, Switch, IndexRoute, Link, browserHistory } from 'react-r
 // export default Nav;
 
 
-class Nav extends Component {
-  render () {
-    return (
-      <div>
-        <ul className='nav'>
-          <li>
-            <Link exact activeClassName='active' to='/'>Home</Link>
-          </li>
-        </ul>
-      </div>
-    );
- }
-}
+// var React = require('react');
+// var NavLink = require('react-router-dom').NavLink;
+
+import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
+import Home from './Home'
+import Contact from './Contact'
+import FilterRecipes from './FilterRecipes'
+
+export const Nav = () => (
+  <ul className='nav'>
+    <li>
+      <Link activeClassName='active' to='/'>Home</Link>
+    </li>
+    <li>
+      <Link activeClassName='active' to='/Contact'>Contact</Link>
+    </li>
+    <li>
+      <Link activeClassName='active' to='/FilterRecipes'>Select Recipes</Link>
+    </li>
+  </ul>
+)
 
 export default Nav;
