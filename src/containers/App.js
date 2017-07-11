@@ -18,13 +18,15 @@ import Contact from '../components/Contact'
 import FilterRecipes from '../components/FilterRecipes'
 import RecipeDetails from '../components/RecipeDetails'
 
-import api from '../utils/api'
+
+import RailsApi from '../utils/RailsApi'
 
 
 class App extends Component {
 	render() {
 		return (
 			<div>
+        <RailsApi/>
 				<Router>
 						<div className='container'>
 							<Nav />

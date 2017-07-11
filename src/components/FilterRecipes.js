@@ -13,7 +13,7 @@ import {
 
 import FilterableRecipeTable from './FilterableRecipeTable'
 
-import api from '../utils/api'
+import RailsApi from '../utils/RailsApi'
 
 
 var allRecipes = [
@@ -441,7 +441,11 @@ class FilterRecipes extends Component {
 	render() {
     console.log("xxxxxxxxxxxxx");
 		return (
+      <div>
       <FilterableRecipeTable recipes={allRecipes}/>
+      <RailsApi/>
+    </div>
+
 		);
 	}
 }
