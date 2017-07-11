@@ -33,7 +33,7 @@ class App extends Component {
 								<Route exact path='/' component={Home} />
 								<Route exact path='/Contact' component={Contact} />
 								<Route exact path='/FilterRecipes' component={FilterRecipes} />
-                <Route exact path='/Recipe/:id' component={RecipeDetails} />
+                <Route exact path='/Recipe/:recipe_id' component={RecipeDetails} />
 
 								{/* <Route render={function () {
 									return <p>Not Found</p>
