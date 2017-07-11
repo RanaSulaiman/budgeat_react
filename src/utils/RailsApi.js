@@ -1,41 +1,13 @@
-import React, { Component } from 'react'
-import axios from 'axios'
 
-class RailsApi extends Component {
+import axios from 'axios';
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      table: [],
-    }
-  }
+export const fetchRailsData = () => {
+    var url = 'http://localhost:4000/recipes';
 
-  componentDidMount(){
-    axios.get('http://wwww.localhost:4000')
-
-    .then((response)=>{
-        const table = response.data;
-          this.setState({ table });
-          console.log('API Call : Success');
-
-        console.log("In success callback");
+    return axios.get(url)
+      .then(function (response) {
         console.log(response);
-      })
-
-      .catch((error)=>{
-        console.log('API Call : Error');
-        console.log(error);
-      })
+        return response.data;
+      });
   }
-
-  render() {
-    return(
-      <div>
-        {this.state.table.title}
-      </div>
-    );
-  }
-}
-
-
-export default RailsApi
+// export fetchRailsData;

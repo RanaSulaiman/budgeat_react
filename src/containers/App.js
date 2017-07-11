@@ -26,7 +26,7 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-        <RailsApi/>
+        {/* <RailsApi/> */}
 				<Router>
 						<div className='container'>
 							<Nav />
