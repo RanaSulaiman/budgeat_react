@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 // import RailsApi from '../utils/RailsApi'
-// import dotEnv from "dotenv";
-// dotEnv.config();
+import dotEnv from 'dotenv';
+dotEnv.config();
 // var dotenv = require('dotenv');
-require('dotenv').config()
+// require('dotenv').config()
 
 console.log('GGGGGGGGG')
 

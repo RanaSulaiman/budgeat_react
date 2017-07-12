@@ -17,6 +17,8 @@ import Home from '../components/Home'
 import Contact from '../components/Contact'
 import FilterRecipes from '../components/FilterRecipes'
 import RecipeDetails from '../components/RecipeDetails'
+import RecipeInfo from '../components/RecipeInfo'
+
 
 
 import RailsApi from '../utils/RailsApi'
@@ -35,7 +37,7 @@ class App extends Component {
 								<Route exact path='/' component={Home} />
 								<Route exact path='/Contact' component={Contact} />
 								<Route exact path='/FilterRecipes' component={FilterRecipes} />
-                <Route exact path='/Recipe/:recipe_id' component={RecipeDetails} />
+                <Route exact path='/Recipe/:recipe_id' component={RecipeInfo} />
 
 								{/* <Route render={function () {
 									return <p>Not Found</p>

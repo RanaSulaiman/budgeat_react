@@ -25,7 +25,7 @@ class ButtonCost extends Component {
       <option value='1000'>less than $10</option>
     </select>
   // </div>
-  );
+    );
   }
 
 }
