@@ -15,7 +15,7 @@ import FilterableRecipeTable from './FilterableRecipeTable'
 
 import {fetchRailsData} from '../utils/RailsApi'
 
-
+// hardcoded data
 // var allRecipes = [
 // 	{
 // 		id: 1,
