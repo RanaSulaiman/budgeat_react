@@ -10,4 +10,6 @@ export const fetchRailsData = () => {
         return response.data;
       });
   }
+
+// const without (export const) did't work  
 // export fetchRailsData;
