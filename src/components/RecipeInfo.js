@@ -35,7 +35,7 @@ class RecipeInfo extends Component {
           <h1>Detail for recipe # {recipe_id}</h1>
           <h1>{this.state.recipe.title}</h1>
           <h1>{this.state.recipe.sourceName}</h1>
-          <h1>{this.state.recipe.image}</h1>
+          <p><img src= {this.state.recipe.image} className = "image"/></p>
           <p>{this.state.recipe.instructions}</p>
 
 
