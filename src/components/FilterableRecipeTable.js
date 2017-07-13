@@ -9,19 +9,19 @@ import Nav from './Nav'
 // import RecipeTable from './RecipeTable'
 import ButtonCost from './ButtonCost'
 import ButtonTime from './ButtonTime'
-import ButtonCuisine from './ButtonCuisine'
+import ButtonDishType from './ButtonDishType'
 import RecipeTable from './RecipeTable'
 
 class FilterableRecipeTable extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-      cuisineFilterText: "",
+      dishtypeFilterText: "",
 			costFilterText: "0",
 			timeFilterText: "0"
     };
 
-		this.handleCuisineFilterSelect = this.handleCuisineFilterSelect.bind(this);
+		this.handleDishTypeFilterChangeFilterSelect = this.handleDishTypeFilterChangeFilterSelect.bind(this);
 
     this.handleCostFilterSelect = this.handleCostFilterSelect.bind(this);
 
@@ -29,9 +29,9 @@ class FilterableRecipeTable extends Component {
   }
 
 
-		handleCuisineFilterSelect(cuisineFilterText) {
+		handleDishTypeFilterChangeFilterSelect(dishtypeFilterText) {
 			this.setState({
-				cuisineFilterText : cuisineFilterText
+				dishtypeFilterText : dishtypeFilterText
 			});
 		}
 
@@ -50,11 +50,11 @@ class FilterableRecipeTable extends Component {
 	render() {
 		return (
       <div>
-				<ButtonCuisine onCuisineFilterSelect={this.handleCuisineFilterSelect}/>
+				<ButtonDishType onDishTypeFilterSelect={this.handleDishTypeFilterChangeFilterSelect}/>
         <ButtonCost onCostFilterSelect={this.handleCostFilterSelect}/>
 				<ButtonTime onTimeFilterSelect={this.handleTimeFilterSelect}/>
 
-        <RecipeTable recipes={this.props.recipes} cuisineFilterText={this.state.cuisineFilterText} costFilterText={this.state.costFilterText} timeFilterText={this.state.timeFilterText}/>
+        <RecipeTable recipes={this.props.recipes} dishtypeFilterText={this.state.dishtypeFilterText} costFilterText={this.state.costFilterText} timeFilterText={this.state.timeFilterText}/>
 			</div>
 		);
 	}

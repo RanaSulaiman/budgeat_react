@@ -11,5 +11,5 @@ export const fetchRailsData = () => {
       });
   }
 
-// const without (export const) did't work  
+// const without (export const) did't work
 // export fetchRailsData;

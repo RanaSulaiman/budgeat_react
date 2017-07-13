@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <select id="cuisineFilter" onChange={this.handleFilterTextInputChange}>
+      <select id="dishtypeFilter" onChange={this.handleFilterTextInputChange}>
         <option defaultValue value="">Select Cuisine</option>
         <option value="american">American</option>
         <option value="indian">Indian</option>
