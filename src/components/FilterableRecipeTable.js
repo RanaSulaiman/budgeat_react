@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-// import ReactRouter from 'react-router-dom'
 import { Router, Route, Switch } from 'react-router-dom'
-import Foundation from 'react-foundation'
 import PropTypes from 'prop-types'
 
+
 import Nav from './Nav'
-// import RecipeTable from './RecipeTable'
 import ButtonCost from './ButtonCost'
 import ButtonTime from './ButtonTime'
 import ButtonDishType from './ButtonDishType'
