@@ -22,6 +22,8 @@ class ButtonDishType extends Component {
       <option value='snack'>snack</option>
       <option value='salad'>salad</option>
       <option value='soup'>soup</option>
+      <option value='dessert'>dessert</option>
+
     </select>
     );
   }

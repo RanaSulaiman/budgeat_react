@@ -9,14 +9,13 @@ class ButtonIntolerance extends Component {
   handleIntoleranceFilterChange(e) {
     this.props.onIntoleranceFilterSelect(e.target.value);
   }
-
   render() {
     return (
     <select id = "intolerance-filter"
       onChange={this.handleIntoleranceFilterChange}>
       <option defaultValue value=''>All</option>
       <option value='gluten free'>gluten free</option>
-      <option value='dairy free'>dairy free</option>
+      <option value='vegan'>dairy free</option>
 
     </select>
   );

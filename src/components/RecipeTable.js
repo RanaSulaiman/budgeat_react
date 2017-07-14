@@ -6,6 +6,7 @@ class RecipeTable extends Component {
     var dishtypeFilteredList = [];
     var costDishTypeFilteredList = [];
     var timeCostDishTypeFilteredList = [];
+    var intoleranceTimeCostDishTypeFilteredList = [];
     // console.log("xxx dishtypeFilterText: " + this.props.dishtypeFilterText);
 
     if(this.props.dishtypeFilterText !== '') {
@@ -40,9 +41,20 @@ class RecipeTable extends Component {
       timeCostDishTypeFilteredList = costDishTypeFilteredList;
     }
 
+    if (this.props.intoleranceFilterText !== '') {
+        timeCostDishTypeFilteredList.forEach((recipe) =>{
+          if(recipe.diets.includes(this.props.intoleranceFilterText)){
+            intoleranceTimeCostDishTypeFilteredList.push(recipe);
+          }
+        }); //forEach
+    } else {
+      intoleranceTimeCostDishTypeFilteredList = timeCostDishTypeFilteredList;
+    }
+
+
     return (
       <div>
-          {timeCostDishTypeFilteredList.map((recipe,i)=>
+          {intoleranceTimeCostDishTypeFilteredList.map((recipe,i)=>
             <RecipeRow key={i} {...recipe}/>
           )}
       </div>
