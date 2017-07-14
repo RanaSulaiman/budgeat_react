@@ -15,11 +15,6 @@ import Home from '../src/components/Home';
 // var { Router, Route, IndexRoute, Link, browserHistory } = ReactRouter
 
 ReactDOM.render (
-  // ( <Router>
-  //   <Route path="/" component={Home}>
-  //   </Route>
-  // </Router>
-  // )
   <App/>,
   document.getElementById('root')
 );

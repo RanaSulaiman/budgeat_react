@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import RecipeRow from './RecipeRow'
+ 
 
 class RecipeTable extends Component {
   render(){
@@ -53,11 +54,13 @@ class RecipeTable extends Component {
 
 
     return (
-      <div>
-          {intoleranceTimeCostDishTypeFilteredList.map((recipe,i)=>
-            <RecipeRow key={i} {...recipe}/>
-          )}
-      </div>
+      // <div className="container">
+          <div>
+              {intoleranceTimeCostDishTypeFilteredList.map((recipe,i)=>
+                <RecipeRow key={i} {...recipe}/>
+              )}
+          </div>
+    // </div>
     );
   }
 
