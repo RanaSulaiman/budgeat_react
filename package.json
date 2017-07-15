@@ -13,6 +13,7 @@
     "react-foundation": "^0.8.2",
     "react-router-dom": "^4.1.1",
     "react-scripts": "1.0.10"
+    "jquery": "^2.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -10,6 +10,11 @@ import ButtonTime from './ButtonTime'
 import ButtonDishType from './ButtonDishType'
 import ButtonIntolerance from './ButtonIntolerance'
 import RecipeTable from './RecipeTable'
+import ButtonTest from './ButtonTest'
+// import { SplitButton } from 'react-bootstrap';
+// import { MenuItem } from 'react-bootstrap';
+
+
 
 class FilterableRecipeTable extends Component {
 	constructor(props) {
@@ -63,6 +68,7 @@ class FilterableRecipeTable extends Component {
         <ButtonCost onCostFilterSelect={this.handleCostFilterSelect}/>
 				<ButtonTime onTimeFilterSelect={this.handleTimeFilterSelect}/>
 				<ButtonIntolerance onIntoleranceFilterSelect={this.handleIntoleranceFilterSelect}/>
+				{/* <ButtonTest/> */}
 
 
         <RecipeTable recipes={this.props.recipes} dishtypeFilterText={this.state.dishtypeFilterText} costFilterText={this.state.costFilterText}

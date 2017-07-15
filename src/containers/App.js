@@ -28,10 +28,14 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-        {/* <RailsApi/> */}
 				<Router>
 						<div className='container'>
-							<Nav />
+              <div className='header'>
+                {/* <img className='money' height='50' src={'../images/to/money.png'} />
+
+                <img className='bowl' height='50' src={'../images/to/bowl.png'} /> */}
+                <Nav />
+              </div>
 
 							<Switch>
 								<Route exact path='/' component={Home} />
