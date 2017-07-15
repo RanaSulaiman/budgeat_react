@@ -20,7 +20,7 @@ class ButtonCost extends Component {
         <label className='button-lb' > Cost:- </label>
         <select className='filter'
           onChange={this.handleCostFilterChange}>
-          <option defaultValue value="0">All</option>
+          <option defaultValue value="0">None</option>
           <option value='50'>less than $0.5</option>
           <option value='100'>less than $1.0</option>
           <option value='150'>less than $1.5</option>

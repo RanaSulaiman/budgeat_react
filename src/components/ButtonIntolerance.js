@@ -11,13 +11,17 @@ class ButtonIntolerance extends Component {
   }
   render() {
     return (
-    <select id = "intolerance-filter"
-      onChange={this.handleIntoleranceFilterChange}>
-      <option defaultValue value=''>All</option>
-      <option value='gluten free'>gluten free</option>
-      <option value='vegan'>dairy free</option>
+      <div className='button-gr'>
+        <label className='button-lb' > Intolerances:- </label>
 
-    </select>
+        <select className='filter'
+          onChange={this.handleIntoleranceFilterChange}>
+          <option defaultValue value=''>None</option>
+          <option value='gluten free'>gluten free</option>
+          <option value='vegan'>dairy free</option>
+
+        </select>
+      </div>
   );
   }
 

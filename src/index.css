@@ -51,12 +51,12 @@ body {
 
 .button-gr{
   display: inline-block;
+  font-size: .7em;
 }
 
 .filter{
   border: none;
 }
-
 
 
 /* Dropdown Button */

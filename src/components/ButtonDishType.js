@@ -14,17 +14,21 @@ class ButtonDishType extends Component {
 
   render() {
     return (
-    <select id = 'dish-type-filter'
-      onChange={this.handleDishTypeFilterChange}>
-      <option defaultValue value=''>All</option>
-      <option value='main course'>main course</option>
-      <option value='drink'>drink</option>
-      <option value='snack'>snack</option>
-      <option value='salad'>salad</option>
-      <option value='soup'>soup</option>
-      <option value='dessert'>dessert</option>
+      <div className='button-gr'>
+        <label className='button-lb' > Dish Type:- </label>
 
-    </select>
+        <select className='filter'
+          onChange={this.handleDishTypeFilterChange}>
+          <option defaultValue value=''>None</option>
+          <option value='main course'>main course</option>
+          <option value='drink'>drink</option>
+          <option value='snack'>snack</option>
+          <option value='salad'>salad</option>
+          <option value='soup'>soup</option>
+          <option value='dessert'>dessert</option>
+
+        </select>
+      </div>
     );
   }
 
