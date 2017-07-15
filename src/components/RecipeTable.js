@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import RecipeRow from './RecipeRow'
- 
+
 
 class RecipeTable extends Component {
   render(){
@@ -54,13 +54,15 @@ class RecipeTable extends Component {
 
 
     return (
-      // <div className="container">
-          <div>
-              {intoleranceTimeCostDishTypeFilteredList.map((recipe,i)=>
-                <RecipeRow key={i} {...recipe}/>
-              )}
-          </div>
-    // </div>
+      <div classNmae='container'>
+      <ul className='row-fluid'>
+          {intoleranceTimeCostDishTypeFilteredList.map((recipe,recipe_id)=>
+            <li className='col-sm-4'>
+              <RecipeRow key={recipe_id} {...recipe}/>
+            </li>
+          )}
+      </ul>
+    </div>
     );
   }
 

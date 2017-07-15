@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import {Button} from 'react-bootstrap';
 
 
-
 class ButtonCost extends Component {
   constructor(props) {
   super(props);

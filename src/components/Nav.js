@@ -6,17 +6,19 @@ import Contact from './Contact'
 import FilterRecipes from './FilterRecipes'
 
 export const Nav = () => (
-  <ul className='nav'>
-    <li>
+  <div className='container'>
+  <ul className='row'>
+    <li className='col-sm-3'>
       <Link activeClassName='active' to='/'>Home</Link>
     </li>
-    <li>
+    <li className='col-sm-6'>
       <Link activeClassName='active' to='/Contact'>Contact</Link>
     </li>
-    <li>
+    <li className='col-sm-3'>
       <Link activeClassName='active' to='/FilterRecipes'>Select Recipes</Link>
     </li>
   </ul>
+</div>
 )
 
 export default Nav;

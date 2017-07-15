@@ -4,12 +4,27 @@ body {
   font-family: sans-serif;
 }
 
+.recipe-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.recipe-ind{
+  margin: 20px;
+  text-align: center;
+
+}
+
 .image {
   height: 200px;
   width: 200px;
 
 }
-
+.title {
+  height: 35px;
+  text-align: center;
+}
 .nav {
   display: flex;
 }

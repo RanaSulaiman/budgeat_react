@@ -65,7 +65,6 @@ class FilterableRecipeTable extends Component {
 				<ButtonIntolerance onIntoleranceFilterSelect={this.handleIntoleranceFilterSelect}/>
 
 
-
         <RecipeTable recipes={this.props.recipes} dishtypeFilterText={this.state.dishtypeFilterText} costFilterText={this.state.costFilterText}
 				timeFilterText={this.state.timeFilterText}
 				intoleranceFilterText={this.state.intoleranceFilterText}/>
