@@ -32,14 +32,13 @@ class RecipeInfo extends Component {
 
     return(
         <div>
-          <h1>Detail for recipe # {recipe_id}</h1>
+          {/* <h1>Detail for recipe # {recipe_id}</h1> */}
           <h1>{this.state.recipe.title}</h1>
           <h1>{this.state.recipe.sourceName}</h1>
-          <p><img src= {this.state.recipe.image} className = "image"/></p>
+          <p><img className='recipe-img'src= {this.state.recipe.image} /></p>
+          <p><a href= {this.state.recipe.source_url}>Click here for the original recipe source</a></p>
           <p>{this.state.recipe.instructions}</p>
 
-
-          {/* <h1>{this.state.table.cuisines[0]}</h1> */}
         </div>
     );
   }
