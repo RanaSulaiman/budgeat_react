@@ -63,18 +63,28 @@ class FilterableRecipeTable extends Component {
 
 	render() {
 		return (
-      <div>
-				<ButtonDishType onDishTypeFilterSelect={this.handleDishTypeFilterChangeFilterSelect}/>
-        <ButtonCost onCostFilterSelect={this.handleCostFilterSelect}/>
-				<ButtonTime onTimeFilterSelect={this.handleTimeFilterSelect}/>
-				<ButtonIntolerance onIntoleranceFilterSelect={this.handleIntoleranceFilterSelect}/>
-				{/* <ButtonTest/> */}
+      // <div>
+				<div className={'container',  'button-spacing'}>
+					<ul className={'row-fluid','all-buttons'}>
+						<li className='col-sm-3'>
+					<ButtonDishType  onDishTypeFilterSelect={this.handleDishTypeFilterChangeFilterSelect}/></li>
+	        <li className='col-sm-3'><ButtonCost  onCostFilterSelect={this.handleCostFilterSelect}/></li>
+					<li className='col-sm-3'><ButtonTime  onTimeFilterSelect={this.handleTimeFilterSelect}/></li>
+					<li className='col-sm-3'><ButtonIntolerance  onIntoleranceFilterSelect={this.handleIntoleranceFilterSelect}/></li>
 
+					{/* <ButtonTest/> */}
+				</ul> {/* row */}
+
+				<div className='row'>
+					<div className='col'>
 
         <RecipeTable recipes={this.props.recipes} dishtypeFilterText={this.state.dishtypeFilterText} costFilterText={this.state.costFilterText}
 				timeFilterText={this.state.timeFilterText}
 				intoleranceFilterText={this.state.intoleranceFilterText}/>
 			</div>
+		</div>
+		</div>
+
 		);
 	}
 

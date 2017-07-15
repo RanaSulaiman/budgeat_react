@@ -12,6 +12,7 @@ class ButtonIntolerance extends Component {
   render() {
     return (
       <div className='button-gr'>
+
         <label className='button-lb' > Intolerances:- </label>
 
         <select className='filter'
@@ -21,6 +22,7 @@ class ButtonIntolerance extends Component {
           <option value='vegan'>dairy free</option>
 
         </select>
+
       </div>
   );
   }
