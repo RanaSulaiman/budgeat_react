@@ -13,7 +13,7 @@ import Message from 'react-icons/lib/md/message'
 import RoomService from 'react-icons/lib/md/room-service'
 // app.use(express.static(path.join(__dirname, 'src')))
 
-// import home from '../images/home.png';
+import home from '../images/home.png';
 
 
 export const Nav = () => (
@@ -27,7 +27,9 @@ export const Nav = () => (
 
     <li className='col-sm-2'>
       <Link activeClassName='active' to='/'>
-      <HomeOutline className='home'/></Link>
+      {/* <HomeOutline className='home'/> */}
+      <img className='home' height='40'  src={home} alt='home'/>
+    </Link>
     </li>
 
     <li className='col-sm-2'>

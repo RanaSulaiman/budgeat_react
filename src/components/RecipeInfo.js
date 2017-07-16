@@ -22,6 +22,16 @@ class RecipeInfo extends Component {
     this.state = {
       recipe: {},
     }
+    // this.Intolerance = function() {
+    //   if (this.state.recipe.diets.includes('vegan')){
+    //     return <Leaf className='info-icon'/>
+    //   } else if(this.state.recipe.diets.includes('gluten free'))
+    //  {
+    //    return <HighlightRemove className='info-icon'/>
+    //
+    //  }
+    // }
+    // console.log('this is Intolerance' + this.Intolerance);
   }
 
   componentDidMount(){
@@ -43,6 +53,19 @@ class RecipeInfo extends Component {
   render() {
     let recipe_id = this.props.match.params.recipe_id;
 
+    let Intolerance = function(props) {
+      if(this.state.recipe.diets.includes('vegan')){
+        return <Leaf className='info-icon'/>;
+      } else if(this.state.recipe.diets.includes('gluten free'))
+     {
+       return <HighlightRemove className='info-icon'/>;
+
+     }
+
+   };
+   console.log('ccccccc' + Intolerance);
+
+
     return(
         <div >
           {/* <h1>Detail for recipe # {recipe_id}</h1> */}
@@ -60,9 +83,12 @@ class RecipeInfo extends Component {
                 <ul className='icons-list'>
                   <li><Money className='info-icon'/> $ {Number(((this.state.recipe.price_serving)/100).toFixed(2))} per serving </li>
                   <li><Stopwatch className='info-icon'/> ready in  {this.state.recipe.ready_time} minutes </li>
-                  <li><Leaf className='info-icon'/>{this.state.recipe.diets} </li>
+                  <li>
+                    {this.props.Intolerance}
+                  </li>
+                    {/* <Leaf className='info-icon'/>{this.state.recipe.diets} </li>
                   <li><CheckCircle className='info-icon'/> {this.state.recipe.diets}</li>
-                  <li><HighlightRemove className='info-icon'/> </li>
+                  <li><HighlightRemove className='info-icon'/> </li> */}
                   <li><Heart className='info-icon'/> {this.state.recipe.weightWatcherSmartPoints} points of weight watcher </li>
 
 
@@ -81,6 +107,7 @@ class RecipeInfo extends Component {
 
             <p>Preperation Time :- {this.state.recipe.prep_time} minutes</p>
             <p>Cooking Time :- {this.state.recipe.cook_time} minutes</p>
+            <p>{this.state.recipe.diets}</p>
 
 
 
