@@ -25,11 +25,13 @@ import RailsApi from '../utils/RailsApi'
 class App extends Component {
 	render() {
 		return (
-			<div>
+			// <div>
 				<Router>
-						<div >
-              <div className='header'>
-                <Nav className='nav' />
+						<div className='container'>
+              <div className='row'>
+                <div className={'col-sm-12, header'}>
+                  <Nav  />
+                </div>
               </div>
 
 							<Switch>
@@ -41,7 +43,7 @@ class App extends Component {
 							</Switch>
 						</div>
 					</Router>
-			</div>
+			/* </div> */
 		);
 	}
 
