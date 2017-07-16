@@ -65,14 +65,16 @@ li{
   background-color: green;
 
 }
+
+.footer {
+  heigth: 100px;
+  background-color: gray;
+
+}
+
 .bowl {
   height: 30px,
 }
-/*.footer {
-  heigth: 20px;
-  background-color: gray;
-
-}*/
 
 .button-gr{
   display: inline-block;

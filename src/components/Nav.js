@@ -28,7 +28,7 @@ export const Nav = () => (
     <li className='col-sm-2'>
       <Link activeClassName='active' to='/'>
       {/* <HomeOutline className='home'/> */}
-      <img className='home' height='40'  src={home} alt='home'/>
+      <img className='home' height='50'  src={home} alt='home'/>
     </Link>
     </li>
 

@@ -11,6 +11,7 @@ import {
 	Switch,
   Redirect
 } from 'react-router-dom'
+import {browserHistory} from 'react-router'
 
 import Nav from '../components/Nav'
 import Home from '../components/Home'
@@ -21,21 +22,22 @@ import RecipeInfo from '../components/RecipeInfo'
 
 import RailsApi from '../utils/RailsApi'
 
-{/* <img className="img-responsive" height='500'  src={"../images/home.png"} alt="home"/> */}
-
-
 
 class App extends Component {
 	render() {
 		return (
 			// <div>
 				<Router>
-						<div className={'container', 'header'}>
-              <div >
-                <div>
-                  <Nav className='icons'  />
-                </div>
-              </div>
+          <div>
+						{/* <div className='container'>
+              <div className='row' > */}
+                <header className='header'>
+                  <Nav className='nav'/>
+                </header>
+              {/* </div> */}
+            {/* </div> */}
+
+                <footer className='footer'></footer>
 
 							<Switch>
 								<Route exact path='/' component={Home} />
