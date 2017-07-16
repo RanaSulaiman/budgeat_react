@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-import { Form, Text } from 'react-form'
+import { Form, Text } from 'react-form';
+
+// imported react-icons
+import FacebookSquare from 'react-icons/lib/fa/facebook-square';
+import GithubSquare from 'react-icons/lib/fa/github-square';
+import GithubAlt from 'react-icons/lib/fa/github-alt';
+
+import Mail from 'react-icons/lib/ti/mail';
+
+
 
 export const Contact = () => (
   // <h1>Contact Page</h1>

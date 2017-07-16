@@ -5,8 +5,8 @@ import Home from './Home'
 import Contact from './Contact'
 import FilterRecipes from './FilterRecipes'
 
-import Search from 'react-icons/lib/fa/search'
-import AccountBalance from 'react-icons/lib/md/account-balance'
+import Search from 'react-icons/lib/fa/search';
+import HomeOutline from 'react-icons/lib/ti/home-outline';
 import AttachMoney from 'react-icons/lib/md/attach-money'
 import LocalRestaurant from 'react-icons/lib/md/local-restaurant'
 import Message from 'react-icons/lib/md/message'
@@ -27,7 +27,7 @@ export const Nav = () => (
 
     <li className='col-sm-2'>
       <Link activeClassName='active' to='/'>
-      <AccountBalance className='home'/></Link>
+      <HomeOutline className='home'/></Link>
     </li>
 
     <li className='col-sm-2'>

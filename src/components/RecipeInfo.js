@@ -1,6 +1,19 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
+// imported react-icons
+import Leaf from 'react-icons/lib/fa/leaf';
+
+// import Leaf from 'react-icons/lib/ti/leaf';
+
+import AccessTime from 'react-icons/lib/md/access-time';
+import Stopwatch from 'react-icons/lib/ti/stopwatch';
+import Heart from 'react-icons/lib/ti/heart';
+
+
+
+
+
 class RecipeInfo extends Component {
 
   constructor(props) {
@@ -36,7 +49,7 @@ class RecipeInfo extends Component {
           <h1>{this.state.recipe.title}</h1>
           <h1>{this.state.recipe.sourceName}</h1>
           <p><img className='recipe-img'src= {this.state.recipe.image} /></p>
-          <p><a href= {this.state.recipe.source_url}>Click here for ingredients and full details &copy;</a></p>
+          <p><a href= {this.state.recipe.source_url} target= '_blank'>Click here for ingredients and full details &copy;</a></p>
           <p>WeightWatcherSmartPoints :- {this.state.recipe.weightWatcherSmartPoints}</p>
           <p>Servings :- {this.state.recipe.servings}</p>
           <p>Price_Serving:- $ {Number(((this.state.recipe.price_serving)/100).toFixed(2))}</p>
