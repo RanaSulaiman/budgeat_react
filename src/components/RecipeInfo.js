@@ -9,6 +9,11 @@ import Leaf from 'react-icons/lib/fa/leaf';
 import AccessTime from 'react-icons/lib/md/access-time';
 import Stopwatch from 'react-icons/lib/ti/stopwatch';
 import Heart from 'react-icons/lib/ti/heart';
+import Money from 'react-icons/lib/fa/money';
+
+// Checked and nonChecked
+import CheckCircle from 'react-icons/lib/md/check-circle';
+import HighlightRemove from 'react-icons/lib/md/highlight-remove'
 
 
 
