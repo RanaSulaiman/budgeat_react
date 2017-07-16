@@ -19,8 +19,6 @@ import FilterRecipes from '../components/FilterRecipes'
 import RecipeDetails from '../components/RecipeDetails'
 import RecipeInfo from '../components/RecipeInfo'
 
-
-
 import RailsApi from '../utils/RailsApi'
 
 
@@ -29,12 +27,9 @@ class App extends Component {
 		return (
 			<div>
 				<Router>
-						<div className='container'>
+						<div >
               <div className='header'>
-                {/* <img className='money' height='50' src={'../images/to/money.png'} />
-
-                <img className='bowl' height='50' src={'../images/to/bowl.png'} /> */}
-                <Nav />
+                <Nav className='nav' />
               </div>
 
 							<Switch>
@@ -43,9 +38,6 @@ class App extends Component {
 								<Route exact path='/FilterRecipes' component={FilterRecipes} />
                 <Route exact path='/Recipe/:recipe_id' component={RecipeInfo} />
 
-								{/* <Route render={function () {
-									return <p>Not Found</p>
-								}} /> */}
 							</Switch>
 						</div>
 					</Router>

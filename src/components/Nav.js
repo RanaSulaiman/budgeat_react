@@ -4,17 +4,25 @@ import {Link} from 'react-router-dom'
 import Home from './Home'
 import Contact from './Contact'
 import FilterRecipes from './FilterRecipes'
+import Search from 'react-icons/lib/fa/search'
+// app.use(express.static(path.join(__dirname, 'src')))
+
 // import home from '../images/home.png';
+
+// export default {
+//   home
+// }
 
 // console.log(home);
 
 export const Nav = () => (
+
   <div className='container'>
   <ul className='row'>
     <li className='col-sm-2'>
       <Link activeClassName='active' to='/'>
       Home</Link>
-      <img className='home' height='50'  src={'home'} alt='home'/>
+      <img className="img-responsive" height='500'  src={"../images/home.png"} alt="home"/>
 
     </li>
     <li className='col-sm-2'>

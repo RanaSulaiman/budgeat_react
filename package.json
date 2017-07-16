@@ -11,14 +11,12 @@
     "react-dom": "^15.6.1",
     "react-form": "^1.3.0",
     "react-foundation": "^0.8.2",
+    "react-icons": "^2.2.5",
     "react-router-dom": "^4.1.1",
     "react-scripts": "1.0.10"
-    "jquery": "^2.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    /*Added this line to enable import Thing from 'Thing'*/
-    "start": "NODE_PATH=src react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

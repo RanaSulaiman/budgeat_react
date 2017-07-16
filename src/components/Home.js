@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import Search from 'react-icons/lib/fa/search'
+
 
 export const Home = () => (
   <div>
+    <Search className='search'/>
+    <img className="img-responsive" height='500'  src={"../images/home.png"} alt="home"/>
+
     <h1>A word from the author</h1>
     <p>
       The available data indicates that the great majority of low-income Americans not only understand the importance of healthy eating but also they want to know more about how to do so. The biggest barriers are cost and time.

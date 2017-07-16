@@ -4,6 +4,11 @@ body {
   font-family: sans-serif;
 }
 
+.search {
+  color: orange;
+  font-size: 2em;
+}
+
 /*.recipe-list{
   display: flex;
   flex-wrap: wrap;
@@ -31,9 +36,11 @@ li{
   text-align: center;
 }
 .nav {
-  /*display: flex;*/
-  /*position: fixed;*/
-  float:right;
+  /*float:left;*/
+  /*display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;*/
+
 }
 
 .active {
