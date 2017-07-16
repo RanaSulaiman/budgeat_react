@@ -53,7 +53,7 @@ li{
 
 }
 .icons{
-  padding-top: 50px; 
+  padding-top: 50px;
 }
 
 .active {
@@ -83,7 +83,6 @@ li{
   border: none;
 }
 
-
 .all-buttons{
   border-bottom-width:2px;
   border-bottom-color:black;
@@ -98,6 +97,32 @@ li{
   height: 280px;
   width: 400px;
 }
+
+/*RecipeInfo Styling*/
+.title {
+  margin: 50px;
+}
+.info-icon{
+  font-size: 2.5em;
+  color: #ff512f;
+  color: #fc354c;
+
+}
+
+
+.details {
+  padding-left: 35px;
+}
+.icons-list {
+  /*display: flex;
+  flex-direction: column;
+  align-items:flex-start;*/
+  font-size: .8em;
+  font-weight: bold;
+  margin-left: 45px;
+}
+
+
 /* Dropdown Button */
 /*.dropbtn {
     background-color: #4CAF50;
