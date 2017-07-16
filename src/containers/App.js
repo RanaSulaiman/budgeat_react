@@ -21,16 +21,19 @@ import RecipeInfo from '../components/RecipeInfo'
 
 import RailsApi from '../utils/RailsApi'
 
+{/* <img className="img-responsive" height='500'  src={"../images/home.png"} alt="home"/> */}
+
+
 
 class App extends Component {
 	render() {
 		return (
 			// <div>
 				<Router>
-						<div className='container'>
-              <div className='row'>
-                <div className={'col-sm-12, header'}>
-                  <Nav  />
+						<div className={'container', 'header'}>
+              <div >
+                <div>
+                  <Nav className='icons'  />
                 </div>
               </div>
 

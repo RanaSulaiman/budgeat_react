@@ -4,38 +4,42 @@ import {Link} from 'react-router-dom'
 import Home from './Home'
 import Contact from './Contact'
 import FilterRecipes from './FilterRecipes'
+
 import Search from 'react-icons/lib/fa/search'
+import AccountBalance from 'react-icons/lib/md/account-balance'
+import AttachMoney from 'react-icons/lib/md/attach-money'
+import LocalRestaurant from 'react-icons/lib/md/local-restaurant'
+import Message from 'react-icons/lib/md/message'
+import RoomService from 'react-icons/lib/md/room-service'
 // app.use(express.static(path.join(__dirname, 'src')))
 
 // import home from '../images/home.png';
 
-// export default {
-//   home
-// }
-
-// console.log(home);
 
 export const Nav = () => (
 
   <div className='container'>
-  <ul className='nav'>
     <div className='row'>
-      <p className='col-sm-6'>logo</p>
+      <p className='col-sm-3'><RoomService className='logo-food'/></p>
+      <p className='col-sm-3'><AttachMoney className='logo-money'/></p>
+
+    <ul className={'nav','col-sm-6'} >
+
     <li className='col-sm-2'>
       <Link activeClassName='active' to='/'>
-      Home</Link>
-      <img className="img-responsive" height='500'  src={"../images/home.png"} alt="home"/>
+      <AccountBalance className='home'/></Link>
     </li>
 
     <li className='col-sm-2'>
-      <Link activeClassName='active' to='/Contact'>Contact</Link>
+      <Link activeClassName='active' to='/Contact'><Message className='contact'/></Link>
     </li>
 
     <li className='col-sm-2'>
-      <Link activeClassName='active' to='/FilterRecipes'>Select Recipes</Link>
+      <Link activeClassName='active' to='/FilterRecipes'><Search className='search'/></Link>
     </li>
-  </div>
   </ul>
+
+  </div>
 </div>
 )
 
