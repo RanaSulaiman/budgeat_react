@@ -36,7 +36,16 @@ class RecipeInfo extends Component {
           <h1>{this.state.recipe.title}</h1>
           <h1>{this.state.recipe.sourceName}</h1>
           <p><img className='recipe-img'src= {this.state.recipe.image} /></p>
-          <p><a href= {this.state.recipe.source_url}>Click here for the original recipe source</a></p>
+          <p><a href= {this.state.recipe.source_url}>Click here for ingredients and full details &copy;</a></p>
+          <p>WeightWatcherSmartPoints :- {this.state.recipe.weightWatcherSmartPoints}</p>
+          <p>Servings :- {this.state.recipe.servings}</p>
+          <p>Price_Serving:- $ {Number(((this.state.recipe.price_serving)/100).toFixed(2))}</p>
+
+          <p>Preperation Time :- {this.state.recipe.prep_time} minutes</p>
+          <p>Cooking Time :- {this.state.recipe.cook_time} minutes</p>
+
+
+
           <p>{this.state.recipe.instructions}</p>
 
         </div>

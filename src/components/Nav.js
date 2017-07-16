@@ -14,7 +14,7 @@ export const Nav = () => (
     <li className='col-sm-2'>
       <Link activeClassName='active' to='/'>
       Home</Link>
-      {/* <img className='home' height='50'  src={'home'} alt='home'/> */}
+      <img className='home' height='50'  src={'home'} alt='home'/>
 
     </li>
     <li className='col-sm-2'>
