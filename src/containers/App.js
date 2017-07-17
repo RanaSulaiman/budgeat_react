@@ -32,7 +32,7 @@ class App extends Component {
 						 <div /*className='container'*/>
               <div /*className='row'*/ >
                 <header className='header'>
-                  <Nav className='nav'/>
+                  <Nav />
                 </header>
               </div>
             </div>

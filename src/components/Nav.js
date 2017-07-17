@@ -19,27 +19,29 @@ import home from '../images/home.png';
 export const Nav = () => (
 
   <div className='container-fluid'>
-    <div className={'row', 'logo-display'}>
+    <div className={'row','logo-display'}>
 
-        <p className='col-2'><RoomService className='logo-food'/></p>
-        <p className='col-2'><AttachMoney className='logo-money'/></p>
+        {/* <p className='col-2'><RoomService className='logo-icon'/></p> */}
+        <p className='col-2'><AttachMoney className='logo-icon'/></p>
+        <p className='app-name'>BudgEat</p>
+        <p className='col-2'><AttachMoney className='logo-icon'/></p>
     </div>
 
     <ul className={'row','nav-display' } >
 
-    <li className='col-xsm-3'>
+    <li className='col-sm-3'>
       <Link activeClassName='active' to='/'>
-      {/* <HomeOutline className='home'/> */}
-      <img className='home' height='50'  src={home} alt='home'/>
+      <HomeOutline className='nav-icon'/>
+      {/* <img className='home' height='50'  src={home} alt='home'/> */}
     </Link>
     </li>
 
-    <li className='col-xsm-3'>
-      <Link activeClassName='active' to='/Contact'><Message className='contact'/></Link>
+    <li className='col-sm-3'>
+      <Link activeClassName='active' to='/Contact'><Message className='nav-icon'/></Link>
     </li>
 
-    <li className='col-xsm-3'>
-      <Link activeClassName='active' to='/FilterRecipes'><Search className='search'/></Link>
+    <li className='col-sm-3'>
+      <Link activeClassName='active' to='/FilterRecipes'><Search className='nav-icon'/></Link>
     </li>
   </ul>
 
