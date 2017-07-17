@@ -24,17 +24,17 @@ class RecipeInfo extends Component {
     }
   }
 
-  Intolerance(props) {
-
-    console.log('intolerance function diet = ' + this.state.recipe.diets);
-   if (this.state.recipe.diets.includes('vegan')){
-       return <Leaf className='info-icon'/>
-    }
-   if (this.state.recipe.diets.includes('gluten free')) {
-      return <HighlightRemove className='info-icon'/>
-    }
-    return "helloxxxxxxx"
- }
+ //  intolerance() {
+ //    var diets = this.state.recipe.diets;
+ //    console.log('intolerance function diet = ');
+ //     console.log(diets);
+ //   if (diets.includes("vegan")){
+ //       return <Leaf className='info-icon'/>
+ //    }
+ //   if (diets.includes("gluten free")) {
+ //      return <HighlightRemove className='info-icon'/>
+ //    }
+ // }
 
   componentDidMount(){
     let recipe_id = this.props.match.params.recipe_id;
@@ -44,7 +44,6 @@ class RecipeInfo extends Component {
         const recipe = response.data;
           this.setState({ recipe });
           console.log('getRecipeInfoById: Successful API call');
-          console.log(this.state.table);
         })
         .catch((error)=>{
           console.log('getRecipeInfoById: Failed API call');
@@ -54,6 +53,22 @@ class RecipeInfo extends Component {
 
   render() {
     let recipe_id = this.props.match.params.recipe_id;
+    console.log('xxyyhhyyhhhyy' + this.state.recipe.diets );
+    let allergy = this.state.recipe.diets;
+
+    var intolerance = ()=> {
+      console.log('this is the allergy' + allergy);
+      // var diets = this.state.recipe.diets;
+      // console.log('intolerance function diet = ');
+      //  console.log(diets);
+     if (allergy.includes("vegan")){
+         return <Leaf className='info-icon'/>
+      }
+     if (allergy.includes("gluten free")) {
+        return <HighlightRemove className='info-icon'/>
+      }
+   }
+
 
   //  console.log('ccccccc' + Intolerance);
 
@@ -79,7 +94,7 @@ class RecipeInfo extends Component {
                     listitem {this.state.recipe.diets}
                   </li>
                   <li>
-                    {this.Intolerance}
+                    {intolerance}
                   </li>
                     {/* <Leaf className='info-icon'/>{this.state.recipe.diets} </li>
                   <li><CheckCircle className='info-icon'/> {this.state.recipe.diets}</li>
@@ -104,9 +119,7 @@ class RecipeInfo extends Component {
             <p>Cooking Time :- {this.state.recipe.cook_time} minutes</p>
             <p>{this.state.recipe.diets}</p>
 
-
-
-            <p className='text-justify'>{this.state.recipe.instructions}</p>
+            <p className='instructions'>{this.state.recipe.instructions}</p>
             </div>
 
         </div>

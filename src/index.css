@@ -120,6 +120,12 @@ li{
 .details {
   padding-left: 35px;
 }
+
+.instructions{
+  text-align: justify;
+  background-color: lightblue;
+  padding: 15px;
+}
 .icons-list {
   /*display: flex;
   flex-direction: column;
