@@ -19,31 +19,29 @@ import home from '../images/home.png';
 export const Nav = () => (
 
   <div className='container-fluid'>
-    <div className={'row', 'logo-display'}>
+    <div className='row'>
+      <p className='col-sm-3'><RoomService className='logo-food'/></p>
+      <p className='col-sm-3'><AttachMoney className='logo-money'/></p>
 
-        <p className='col-2'><RoomService className='logo-food'/></p>
-        <p className='col-2'><AttachMoney className='logo-money'/></p>
-    </div>
+    <ul className={'nav','col-sm-6'} >
 
-    <ul className={'row','nav-display' } >
-
-    <li className='col-xsm-3'>
+    <li className='col-sm-2'>
       <Link activeClassName='active' to='/'>
       {/* <HomeOutline className='home'/> */}
       <img className='home' height='50'  src={home} alt='home'/>
     </Link>
     </li>
 
-    <li className='col-xsm-3'>
+    <li className='col-sm-2'>
       <Link activeClassName='active' to='/Contact'><Message className='contact'/></Link>
     </li>
 
-    <li className='col-xsm-3'>
+    <li className='col-sm-2'>
       <Link activeClassName='active' to='/FilterRecipes'><Search className='search'/></Link>
     </li>
   </ul>
 
-
+  </div>
 </div>
 )
 

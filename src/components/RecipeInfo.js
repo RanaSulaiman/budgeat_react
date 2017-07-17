@@ -22,17 +22,19 @@ class RecipeInfo extends Component {
     this.state = {
       recipe: {},
     }
-    // this.Intolerance = function() {
-    //   if (this.state.recipe.diets.includes('vegan')){
-    //     return <Leaf className='info-icon'/>
-    //   } else if(this.state.recipe.diets.includes('gluten free'))
-    //  {
-    //    return <HighlightRemove className='info-icon'/>
-    //
-    //  }
-    // }
-    // console.log('this is Intolerance' + this.Intolerance);
   }
+
+  Intolerance(props) {
+
+    console.log('intolerance function diet = ' + this.state.recipe.diets);
+   if (this.state.recipe.diets.includes('vegan')){
+       return <Leaf className='info-icon'/>
+    }
+   if (this.state.recipe.diets.includes('gluten free')) {
+      return <HighlightRemove className='info-icon'/>
+    }
+    return "helloxxxxxxx"
+ }
 
   componentDidMount(){
     let recipe_id = this.props.match.params.recipe_id;
@@ -53,17 +55,7 @@ class RecipeInfo extends Component {
   render() {
     let recipe_id = this.props.match.params.recipe_id;
 
-    let Intolerance = function(props) {
-      if(this.state.recipe.diets.includes('vegan')){
-        return <Leaf className='info-icon'/>;
-      } else if(this.state.recipe.diets.includes('gluten free'))
-     {
-       return <HighlightRemove className='info-icon'/>;
-
-     }
-
-   };
-   console.log('ccccccc' + Intolerance);
+  //  console.log('ccccccc' + Intolerance);
 
 
     return(
@@ -84,7 +76,10 @@ class RecipeInfo extends Component {
                   <li><Money className='info-icon'/> $ {Number(((this.state.recipe.price_serving)/100).toFixed(2))} per serving </li>
                   <li><Stopwatch className='info-icon'/> ready in  {this.state.recipe.ready_time} minutes </li>
                   <li>
-                    {this.props.Intolerance}
+                    listitem {this.state.recipe.diets}
+                  </li>
+                  <li>
+                    {this.Intolerance}
                   </li>
                     {/* <Leaf className='info-icon'/>{this.state.recipe.diets} </li>
                   <li><CheckCircle className='info-icon'/> {this.state.recipe.diets}</li>
@@ -111,7 +106,7 @@ class RecipeInfo extends Component {
 
 
 
-            <p>{this.state.recipe.instructions}</p>
+            <p className='text-justify'>{this.state.recipe.instructions}</p>
             </div>
 
         </div>

@@ -29,11 +29,11 @@ class App extends Component {
 			// <div>
 				<Router>
           <div>
-						 <div /*className='container'*/>
-              <div /*className='row'*/ >
-                <header className='header'>
-                  <Nav className='nav'/>
-                </header>
+						 <div className='container'>
+              <div className='row' >
+                {/* <header className='header'> */}
+                  <Nav className='col'/>
+                {/* </header> */}
               </div>
             </div>
 

@@ -52,6 +52,17 @@ li{
   flex-direction: row;*/
 
 }
+
+.logo-display{
+  display: flex;
+  float: left;
+  text-align: center;
+}
+
+.nav-display {
+  display: flex;
+  float: right;
+}
 .icons{
   padding-top: 50px;
 }
@@ -123,6 +134,7 @@ li{
   font-weight: bold;
   margin-left: 45px;
 }
+
 
 
 /* Dropdown Button */
