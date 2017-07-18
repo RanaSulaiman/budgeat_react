@@ -30,7 +30,7 @@ class RecipeInfo extends Component {
 //     console.log('in Gluten Function = ' + glutenFree);
 //    if (glutenFree === "t"){
 //        return
-//        <Leaf className='info-icon'/>
+//        <Leaf className='info-icon-size'/>
 //     }
 //  }
 //
@@ -98,34 +98,39 @@ class RecipeInfo extends Component {
               </div>{/* img_sourcelink column*/}
 
               <div className='col-sm-6'>
-                <ul className='icons-list'>
-                  <li><Money className='info-icon'/> $ {Number(((this.state.recipe.price_serving)/100).toFixed(2))} per serving </li>
-                  <li><Stopwatch className='info-icon'/> ready in  {this.state.recipe.ready_time} minutes </li>
+                <ul className='info-icons-list'>
+                  <li className='info-icons-spcing'><Money className='info-icon-size
+                    '/> $ {Number(((this.state.recipe.price_serving)/100).toFixed(2))} per serving </li>
+                  <li className='info-icons-spcing'><Stopwatch className='info-icon-size
+                    '/> ready in  {this.state.recipe.ready_time} minutes </li>
                   {/* <li>
                     listitem {this.state.recipe.diets}
                   </li> */}
-                  <li>
+                  <li className='info-icons-spcing'><Heart className='info-icon-size
+                    '/> {this.state.recipe.weightWatcherSmartPoints} points of weight watcher </li>
+
+                  <li className='info-icons-spcing'>
                     {displayItem}
-                    {/* { this.Gluten ? <Leaf className='info-icon'/> : " "} gluten free */}
+                    {/* { this.Gluten ? <Leaf className='info-icon-size
+                    '/> : " "} gluten free */}
                     {/* {this.Gluten} */}
 
                   </li>
                   {displayItem}
 
 
-                  <li>
-                    {/* { this.Dairy ? <CheckCircle className='info-icon'/> : " "} dairy free */}
+                  <li className='info-icons-spcing'>
+                    {/* { this.Dairy ? <CheckCircle className='info-icon-size'/> : " "} dairy free */}
                     {/* {this.Dairy} */}
 
                   </li>
 
-                    {/* <Leaf className='info-icon'/>{this.state.recipe.diets} </li>
-                  <li><CheckCircle className='info-icon'/> {this.state.recipe.diets}</li>
-                  <li><HighlightRemove className='info-icon'/> </li> */}
+                    {/* <Leaf className='info-icon-size'/>{this.state.recipe.diets} </li>
+                  <li><CheckCircle className='info-icon-size'/> {this.state.recipe.diets}</li>
+                  <li><HighlightRemove className='info-icon-size'/> </li> */}
                   {/* { allergy_2 ? <Leaf/> : " "} */}
 
 
-                  <li><Heart className='info-icon'/> {this.state.recipe.weightWatcherSmartPoints} points of weight watcher </li>
                 </ul>
 
               </div>{/* icons column */}
@@ -140,7 +145,7 @@ class RecipeInfo extends Component {
             <p>Cooking Time :- {this.state.recipe.cook_time} minutes</p>
             <p>{this.state.recipe.diets}</p>
 
-            <p className='instructions'>{this.state.recipe.instructions}</p>
+            <p className='info-instructions'>{this.state.recipe.instructions}</p>
             </div>
 
         </div>
