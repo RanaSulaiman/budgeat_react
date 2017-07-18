@@ -60,8 +60,6 @@ class RecipeInfo extends Component {
           console.log('getRecipeInfoById: Failed API call');
           console.log(error);
         })
-
-
   }
 
   render() {
@@ -87,13 +85,13 @@ class RecipeInfo extends Component {
 
 
     return(
-        <div >
-          {/* <h1>Detail for recipe # {recipe_id}</h1> */}
-          <h1 className ='title'>{this.state.recipe.title}</h1>
+        <div className='container'>
+          <h1>Detail for recipe # {recipe_id}</h1>
           {/* <h1>{this.state.recipe.sourceName}</h1> */}
-          <div className='container'>
-            <div className='row'>
+            <h1 className ='info-title'>{this.state.recipe.title}</h1>
 
+
+            <div className='row'>
               <div className='col-sm-6'>
               <p><img className='recipe-img'src= {this.state.recipe.image} /></p>
               <p><a href= {this.state.recipe.source_url} target= '_blank'>Click here for ingredients and full details &copy;</a></p>
@@ -128,17 +126,12 @@ class RecipeInfo extends Component {
 
 
                   <li><Heart className='info-icon'/> {this.state.recipe.weightWatcherSmartPoints} points of weight watcher </li>
-
-
                 </ul>
 
               </div>{/* icons column */}
-
-
             </div>{/*row */}
-          </div>{/*container*/}
 
-            <div className='details'>
+            <div className='details'>{/*details is not used*/}
             <p>WeightWatcherSmartPoints :- {this.state.recipe.weightWatcherSmartPoints}</p>
             <p>Servings :- {this.state.recipe.servings}</p>
             <p>Price_Serving:- $ {Number(((this.state.recipe.price_serving)/100).toFixed(2))}</p>

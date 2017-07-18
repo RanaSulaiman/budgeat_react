@@ -46,6 +46,12 @@ li{
   text-align: center;
   /*text-align: center;*/
 }
+
+/*.title {
+  margin: 50px;
+}*/
+
+
 /*.nav {
   display: inline-block;
   text-align:center;
@@ -108,20 +114,21 @@ li{
 }
 
 /*RecipeInfo Styling*/
-.title {
-  margin: 50px;
-}
 .info-icon{
   font-size: 2.5em;
   color: #ff512f;
   color: #fc354c;
 
 }
-
-
-.details {
-  padding-left: 35px;
+.info-title{
+  height: 50px;
+  text-align: left;
+  margin-bottom: 60px;
 }
+
+/*.details {
+  padding-left: 35px;
+}*/
 
 .instructions{
   text-align: justify;
@@ -134,7 +141,7 @@ li{
   align-items:flex-start;*/
   font-size: .8em;
   font-weight: bold;
-  margin-left: 45px;
+  margin-left: 60px;
 }
 
 
