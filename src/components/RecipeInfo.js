@@ -24,25 +24,25 @@ class RecipeInfo extends Component {
     }
   }
 
-  Gluten() {
-    var glutenFree = this.state.recipe.gluten;
-    console.log('Gluten function diet = ');
-    console.log('in Gluten Function = ' + glutenFree);
-   if (glutenFree === "t"){
-       return
-       <Leaf className='info-icon'/>
-    }
- }
-
- Dairy() {
-   var dairyFree = this.state.recipe.dairy;
-   console.log('in Dairy Function = ' + dairyFree);
-    console.log(dairyFree);
-  if (dairyFree === "t"){
-      return
-      <CheckCircle className='info-icon'/>
-   }
-}
+//   Gluten() {
+//     var glutenFree = this.state.recipe.gluten;
+//     console.log('Gluten function diet = ');
+//     console.log('in Gluten Function = ' + glutenFree);
+//    if (glutenFree === "t"){
+//        return
+//        <Leaf className='info-icon'/>
+//     }
+//  }
+//
+//  Dairy() {
+//    var dairyFree = this.state.recipe.dairy;
+//    console.log('in Dairy Function = ' + dairyFree);
+//     console.log(dairyFree);
+//   if (dairyFree === "t"){
+//       return
+//       <CheckCircle className='info-icon'/>
+//    }
+// }
 
 
 
@@ -71,9 +71,19 @@ class RecipeInfo extends Component {
     let recipe_id = this.props.match.params.recipe_id;
     console.log('xxyyhhyyhhhyy' + this.state.recipe.diets );
 
+    var displayItem = (<span />); // default, this will render an empty span on the page so nothing shows up.
+      if (this.state.recipe.diets) {
+        if (this.state.recipe.diets.includes("vegan")) {
+          displayItem = (<Leaf/>);
+        }
+        else if (this.state.recipes.diets.includes("gluten free")) {
+           displayItem = (<CheckCircle/>);
+        }
+      }
 
-    let allergy_1 = this.state.recipe.diets;
-    console.log("allergy_1 is " + allergy_1);
+
+    // let allergy_1 = this.state.recipe.diets;
+    // console.log("allergy_1 is " + allergy_1);
 
 
     return(
@@ -97,14 +107,17 @@ class RecipeInfo extends Component {
                     listitem {this.state.recipe.diets}
                   </li> */}
                   <li>
+                    {displayItem}
                     {/* { this.Gluten ? <Leaf className='info-icon'/> : " "} gluten free */}
-                    {this.Gluten}
+                    {/* {this.Gluten} */}
 
                   </li>
+                  {displayItem}
+
 
                   <li>
                     {/* { this.Dairy ? <CheckCircle className='info-icon'/> : " "} dairy free */}
-                    {this.Dairy}
+                    {/* {this.Dairy} */}
 
                   </li>
 
