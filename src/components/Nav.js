@@ -27,7 +27,7 @@ export const Nav = () => (
         <p className='col-2'><AttachMoney className='logo-icon'/></p>
     </div>
 
-    <ul className={'row','nav-display' } >
+    <ul className={'nav-display' } >
 
     <li className='col-sm-3'>
       <Link activeClassName='active' to='/'>

@@ -32,7 +32,7 @@ class App extends Component {
 						 <div /*className='container'*/>
               <div /*className='row'*/ >
                 <header className='header'>
-                  <Nav />
+                  <Nav className={"navbar","navbar-light", "bg-faded"}/>
                 </header>
               </div>
             </div>

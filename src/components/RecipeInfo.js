@@ -63,6 +63,8 @@ class RecipeInfo extends Component {
   }
 
   render() {
+    console.log("Rendering RecipeInfo");
+    console.log("RecipeInfo.state = ", this.state);
     // if (!this.state.recipe) {
     //   return <div>Loading</div>
     // }
@@ -74,7 +76,7 @@ class RecipeInfo extends Component {
         if (this.state.recipe.diets.includes("vegan")) {
           displayItem = (<Leaf/>);
         }
-        else if (this.state.recipes.diets.includes("gluten free")) {
+        else if (this.state.recipe.diets.includes("gluten free")) {
            displayItem = (<CheckCircle/>);
         }
       }

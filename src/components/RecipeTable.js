@@ -55,7 +55,7 @@ class RecipeTable extends Component {
 
     return (
     <div classNmae='container'>
-      <ul className='row-fluid'>
+      <ul className='row'>
           {intoleranceTimeCostDishTypeFilteredList.map((recipe,recipe_id)=>
             <li className='col-sm-4'>
               <RecipeRow key={recipe_id} {...recipe}/>
