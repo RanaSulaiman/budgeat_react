@@ -40,9 +40,11 @@ body {
 li{
   list-style: none;
 }
-.title {
-  height: 35px;
+#title {
+  height: 50px;
+  width : 200px;
   text-align: center;
+  /*text-align: center;*/
 }
 /*.nav {
   display: inline-block;
