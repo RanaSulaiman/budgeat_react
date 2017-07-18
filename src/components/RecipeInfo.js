@@ -24,17 +24,28 @@ class RecipeInfo extends Component {
     }
   }
 
- //  intolerance() {
- //    var diets = this.state.recipe.diets;
- //    console.log('intolerance function diet = ');
- //     console.log(diets);
- //   if (diets.includes("vegan")){
- //       return <Leaf className='info-icon'/>
- //    }
- //   if (diets.includes("gluten free")) {
- //      return <HighlightRemove className='info-icon'/>
- //    }
- // }
+  Gluten() {
+    var glutenFree = this.state.recipe.gluten;
+    console.log('Gluten function diet = ');
+    console.log('in Gluten Function = ' + glutenFree);
+   if (glutenFree === "t"){
+       return
+       <Leaf className='info-icon'/>
+    }
+ }
+
+ Dairy() {
+   var dairyFree = this.state.recipe.dairy;
+   console.log('in Dairy Function = ' + dairyFree);
+    console.log(dairyFree);
+  if (dairyFree === "t"){
+      return
+      <CheckCircle className='info-icon'/>
+   }
+}
+
+
+
 
   componentDidMount(){
     let recipe_id = this.props.match.params.recipe_id;
@@ -49,28 +60,20 @@ class RecipeInfo extends Component {
           console.log('getRecipeInfoById: Failed API call');
           console.log(error);
         })
+
+
   }
 
   render() {
+    // if (!this.state.recipe) {
+    //   return <div>Loading</div>
+    // }
     let recipe_id = this.props.match.params.recipe_id;
     console.log('xxyyhhyyhhhyy' + this.state.recipe.diets );
-    let allergy = this.state.recipe.diets;
-
-    var intolerance = ()=> {
-      console.log('this is the allergy' + allergy);
-      // var diets = this.state.recipe.diets;
-      // console.log('intolerance function diet = ');
-      //  console.log(diets);
-     if (allergy.includes("vegan")){
-         return <Leaf className='info-icon'/>
-      }
-     if (allergy.includes("gluten free")) {
-        return <HighlightRemove className='info-icon'/>
-      }
-   }
 
 
-  //  console.log('ccccccc' + Intolerance);
+    let allergy_1 = this.state.recipe.diets;
+    console.log("allergy_1 is " + allergy_1);
 
 
     return(
@@ -90,15 +93,27 @@ class RecipeInfo extends Component {
                 <ul className='icons-list'>
                   <li><Money className='info-icon'/> $ {Number(((this.state.recipe.price_serving)/100).toFixed(2))} per serving </li>
                   <li><Stopwatch className='info-icon'/> ready in  {this.state.recipe.ready_time} minutes </li>
-                  <li>
+                  {/* <li>
                     listitem {this.state.recipe.diets}
-                  </li>
+                  </li> */}
                   <li>
-                    {intolerance}
+                    {/* { this.Gluten ? <Leaf className='info-icon'/> : " "} gluten free */}
+                    {this.Gluten}
+
                   </li>
+
+                  <li>
+                    {/* { this.Dairy ? <CheckCircle className='info-icon'/> : " "} dairy free */}
+                    {this.Dairy}
+
+                  </li>
+
                     {/* <Leaf className='info-icon'/>{this.state.recipe.diets} </li>
                   <li><CheckCircle className='info-icon'/> {this.state.recipe.diets}</li>
                   <li><HighlightRemove className='info-icon'/> </li> */}
+                  {/* { allergy_2 ? <Leaf/> : " "} */}
+
+
                   <li><Heart className='info-icon'/> {this.state.recipe.weightWatcherSmartPoints} points of weight watcher </li>
 
 

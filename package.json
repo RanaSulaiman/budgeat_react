@@ -13,7 +13,8 @@
     "react-foundation": "^0.8.2",
     "react-icons": "^2.2.5",
     "react-router-dom": "^4.1.1",
-    "react-scripts": "1.0.10"
+    "react-scripts": "1.0.10",
+    "render-if": "^0.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,6 +23,8 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "dotenv": "^4.0.0"
+    "dotenv": "^4.0.0",
+    "eslint": "^4.2.0",
+    "eslint-plugin-render-if": "^0.1.0"
   }
 }
