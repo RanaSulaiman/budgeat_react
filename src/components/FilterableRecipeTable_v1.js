@@ -14,6 +14,8 @@ import ButtonTest from './ButtonTest'
 // import { SplitButton } from 'react-bootstrap';
 // import { MenuItem } from 'react-bootstrap';
 
+
+
 class FilterableRecipeTable extends Component {
 	constructor(props) {
 		super(props)
@@ -61,29 +63,29 @@ class FilterableRecipeTable extends Component {
 
 	render() {
 		return (
-				<div className='container'>
-					<div className={'row','all-buttons'}>
-						<div className='col-lg-3 col-md-4 col-sm-6'><ButtonDishType  onDishTypeFilterSelect={this.handleDishTypeFilterChangeFilterSelect}/></div>
-	        	<div className='col-lg-3 col-md-4 col-sm-6'><ButtonCost  onCostFilterSelect={this.handleCostFilterSelect}/>
-						</div>
-						<div className='col-lg-3 col-md-4 col-sm-6'><ButtonTime  onTimeFilterSelect={this.handleTimeFilterSelect}/>
-						</div>
-						<div className='col-lg-3 col-md-4 col-sm-6'><ButtonIntolerance  onIntoleranceFilterSelect={this.handleIntoleranceFilterSelect}/>
-						</div>
+				<div className={'container',  'button-spacing'}>
+					<ul className={'row-fluid','all-buttons'}>
+						<li className='col-sm-3'>
+					<ButtonDishType  onDishTypeFilterSelect={this.handleDishTypeFilterChangeFilterSelect}/></li>
+	        <li className='col-sm-3'><ButtonCost  onCostFilterSelect={this.handleCostFilterSelect}/></li>
+					<li className='col-sm-3'><ButtonTime  onTimeFilterSelect={this.handleTimeFilterSelect}/></li>
+					<li className='col-sm-3'><ButtonIntolerance  onIntoleranceFilterSelect={this.handleIntoleranceFilterSelect}/></li>
 
-					</div>{/* row */}
+				</ul> {/* row */}
 
-					<div className='row'>
-						<div className='col search-all'>
+				<div className='row'>
+					<div className='col'>
 
-			        <RecipeTable  recipes={this.props.recipes} dishtypeFilterText={this.state.dishtypeFilterText} costFilterText={this.state.costFilterText}
-							timeFilterText={this.state.timeFilterText}
-							intoleranceFilterText={this.state.intoleranceFilterText} loading={this.props.loading} />
-						</div>
-					</div>
-				</div>//container
+        <RecipeTable recipes={this.props.recipes} dishtypeFilterText={this.state.dishtypeFilterText} costFilterText={this.state.costFilterText}
+				timeFilterText={this.state.timeFilterText}
+				intoleranceFilterText={this.state.intoleranceFilterText} loading={this.props.loading} />
+			</div>
+		</div>
+		</div>
+
 		);
 	}
+
 }
 
 export default FilterableRecipeTable;

@@ -1,6 +1,6 @@
 body {
-  margin: 15px;
-  padding: 15px;
+  /*margin: 15px;
+  padding: 15px;*/
   font-family: sans-serif;
 }
 
@@ -47,23 +47,6 @@ li{
   /*text-align: center;*/
 }
 
-/*.title {
-  margin: 50px;
-}*/
-
-
-/*.nav {
-  display: inline-block;
-  text-align:center;
-  color: white;
-  padding-top: 50px;*/
-  /*float:left;*/
-  /*display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;*/
-
-/*}*/
-
 
 .icons{
   padding-top: 50px;
@@ -97,21 +80,28 @@ li{
 .filter{
   border: none;
 }
+/*Main search page styling*/
 
+/*FilterableRecipeTable*/
 .all-buttons{
   border-bottom-width:2px;
   border-bottom-color:black;
   border-bottom-style: solid;
   margin-top: 30px;
-  padding-bottom: 20px;
-  display: flex;
-  /*list-style: none;*/
+  /*margin-bottom: 30px;*/
+  padding-bottom:45px;
+  text-align: center;
+}
+
+.search-all{
+  margin-top: 30px;
 }
 
 .recipe-img{
   height: 280px;
   width: 400px;
 }
+
 
 /*RecipeInfo Styling*/
 
