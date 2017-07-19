@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-// import Foundation from 'react-foundation';
 import {Button} from 'react-bootstrap';
 
 

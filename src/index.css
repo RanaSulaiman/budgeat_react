@@ -72,14 +72,7 @@ li{
   height: 30px,
 }
 
-.button-gr{
-  display: inline-block;
-  font-size: .7em;
-}
 
-.filter{
-  border: none;
-}
 /*Main search page styling*/
 
 /*FilterableRecipeTable*/
@@ -102,6 +95,14 @@ li{
   width: 400px;
 }
 
+/*All Button components*/
+.button-gr{
+  display: inline-block;
+}
+
+.filter{
+  border: none;
+}
 
 /*RecipeInfo Styling*/
 
@@ -129,10 +130,6 @@ li{
   text-align: left;
   margin-bottom: 60px;
 }
-
-/*.details {
-  padding-left: 35px;
-}*/
 
 .info-instructions{
   text-align: justify;
