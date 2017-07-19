@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-// imported react-icons
+//react-icons
 import Leaf from 'react-icons/lib/fa/leaf';
 
 // import Leaf from 'react-icons/lib/ti/leaf';
@@ -15,6 +15,16 @@ import Money from 'react-icons/lib/fa/money';
 import CheckCircle from 'react-icons/lib/md/check-circle';
 import HighlightRemove from 'react-icons/lib/md/highlight-remove'
 
+// images
+import gluten from '../images/gluten.png'
+import dairy from '../images/dairy.png'
+import vegetarian from '../images/vegetarian.png'
+// import wheat from '../images/wheat.png'
+
+
+
+
+
 class RecipeInfo extends Component {
 
   constructor(props) {
@@ -23,7 +33,7 @@ class RecipeInfo extends Component {
       recipe: {},
     }
   }
-
+  // For summary icons - conditional rendering
   gluten() {
     var glutenFree = this.state.recipe.gluten;
    if (glutenFree === "t"){
@@ -38,7 +48,15 @@ class RecipeInfo extends Component {
   if (dairyFree === "t"){
       return <CheckCircle className='info-icon'/>
    }
-}
+ }
+
+ vegetarian() {
+   var vegetarian = this.state.recipe.vegetarian;
+  if (vegetarian === "t"){
+      return <img src={vegetarian} className='info-img'/>
+   }
+ }
+
 
 
 
@@ -67,21 +85,6 @@ class RecipeInfo extends Component {
     let recipe_id = this.props.match.params.recipe_id;
     console.log('xxyyhhyyhhhyy' + this.state.recipe.diets );
 
-    //var displayItem = (<span />); // default, this will render an empty span on the page so nothing shows up.
-      // if (this.state.recipe.diets) {
-      //   if (this.state.recipe.diets.includes("vegan")) {
-      //     displayItem = (<Leaf/>);
-      //   }
-      //   else if (this.state.recipe.diets.includes("gluten free")) {
-      //      displayItem = (<CheckCircle/>);
-      //   }
-      // }
-
-
-    // let allergy_1 = this.state.recipe.diets;
-    // console.log("allergy_1 is " + allergy_1);
-
-
     return(
         <div className='container'>
           <h1>Detail for recipe # {recipe_id}</h1>
@@ -101,13 +104,9 @@ class RecipeInfo extends Component {
                     '/> $ {Number(((this.state.recipe.price_serving)/100).toFixed(2))} per serving </li>
                   <li className='info-icons-spcing'><Stopwatch className='info-icon-size
                     '/> ready in  {this.state.recipe.ready_time} minutes </li>
-                  {/* <li>
-                    listitem {this.state.recipe.diets}
-                  </li> */}
                   <li className='info-icons-spcing'><Heart className='info-icon-size
                     '/> {this.state.recipe.weightWatcherSmartPoints} points of weight watcher </li>
-
-
+                  {/* To skip rendering empty tag(spce in the browser) if the output is null */}
                   {this.gluten() ? (
                     <li className='info-icons-spcing'>
                       <Leaf className='info-icon-size' />
@@ -120,16 +119,18 @@ class RecipeInfo extends Component {
                     </li>
                   : null}
 
-                    {/* <Leaf className='info-icon-size'/>{this.state.recipe.diets} </li>
-                  <li><CheckCircle className='info-icon-size'/> {this.state.recipe.diets}</li>
-                  <li><HighlightRemove className='info-icon-size'/> </li> */}
-                  {/* { allergy_2 ? <Leaf/> : " "} */}
+                  {this.vegetarian() ?
+                    <li className='info-icons-spcing'>
+                      <img className='info-img' src={vegetarian} />
+                    </li>
+                  : null}
 
+                  {/* <li><img src={wheat} width='30' color="red"/></li> */}
 
                 </ul>
 
-              </div>{/* icons column */}
-            </div>{/*row */}
+              </div>{/*icons column*/}
+            </div>{/*row*/}
 
             <div className='details'>{/*details is not used*/}
             <p>WeightWatcherSmartPoints :- {this.state.recipe.weightWatcherSmartPoints}</p>
@@ -138,9 +139,11 @@ class RecipeInfo extends Component {
 
             <p>Preperation Time :- {this.state.recipe.prep_time} minutes</p>
             <p>Cooking Time :- {this.state.recipe.cook_time} minutes</p>
-          <p>Gluten free :- {this.state.recipe.gluten}</p>
-        <p>Dairy free :- {this.state.recipe.dairy}</p>
-            <p>{this.state.recipe.diets}</p>
+            <p>Gluten free :- {this.state.recipe.gluten}</p>
+            <p>Dairy free :- {this.state.recipe.dairy}</p>
+          <p>{this.state.recipe.vegan}</p>
+        <p>{this.state.recipe.vegetarian}</p>
+
 
             <p className='info-instructions'>{this.state.recipe.instructions}</p>
             </div>

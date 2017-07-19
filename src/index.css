@@ -90,10 +90,6 @@ li{
   margin-top: 30px;
 }
 
-.recipe-img{
-  height: 280px;
-  width: 400px;
-}
 
 /*All Button components*/
 .button-gr{
@@ -106,6 +102,12 @@ li{
 
 /*RecipeInfo Styling*/
 
+.recipe-img{
+  height: 380px;
+  width: 500px;
+  padding-bottom: 20px;
+}
+
 .info-icons-list {
   /*display: flex;
   flex-direction: column;
@@ -116,13 +118,13 @@ li{
 }
 
 .info-icon-size{
-  font-size: 2.5em;
+  font-size: 4em;
   color: #ff512f;
   color: #fc354c;
 
 }
 .info-icons-spcing{
-  height: 40px;
+  height: 60px;
 }
 
 .info-title{
@@ -134,9 +136,12 @@ li{
 .info-instructions{
   text-align: justify;
   background-color: lightblue;
-  padding: 15px;
+  padding-bottom: 20px;
 }
-
+.info-img{
+  width: 40px;
+  color: red;
+}
 
 
 /* Dropdown Button */
