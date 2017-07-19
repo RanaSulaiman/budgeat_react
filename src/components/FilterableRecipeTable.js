@@ -80,7 +80,7 @@ class FilterableRecipeTable extends Component {
 
         <RecipeTable recipes={this.props.recipes} dishtypeFilterText={this.state.dishtypeFilterText} costFilterText={this.state.costFilterText}
 				timeFilterText={this.state.timeFilterText}
-				intoleranceFilterText={this.state.intoleranceFilterText}/>
+				intoleranceFilterText={this.state.intoleranceFilterText} loading={this.props.loading} />
 			</div>
 		</div>
 		</div>

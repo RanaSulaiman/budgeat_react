@@ -13,7 +13,7 @@ import Message from 'react-icons/lib/md/message'
 import RoomService from 'react-icons/lib/md/room-service'
 // app.use(express.static(path.join(__dirname, 'src')))
 
-import home from '../images/home.png';
+//import home from '../images/home.png';
 
 
 export const Nav = () => (

@@ -24,25 +24,21 @@ class RecipeInfo extends Component {
     }
   }
 
-//   Gluten() {
-//     var glutenFree = this.state.recipe.gluten;
-//     console.log('Gluten function diet = ');
-//     console.log('in Gluten Function = ' + glutenFree);
-//    if (glutenFree === "t"){
-//        return
-//        <Leaf className='info-icon-size'/>
-//     }
-//  }
-//
-//  Dairy() {
-//    var dairyFree = this.state.recipe.dairy;
-//    console.log('in Dairy Function = ' + dairyFree);
-//     console.log(dairyFree);
-//   if (dairyFree === "t"){
-//       return
-//       <CheckCircle className='info-icon'/>
-//    }
-// }
+  gluten() {
+    var glutenFree = this.state.recipe.gluten;
+   if (glutenFree === "t"){
+       return <Leaf className='info-icon-size'/>
+    }
+ }
+
+ dairy() {
+   var dairyFree = this.state.recipe.dairy;
+   console.log('in Dairy Function = ' + dairyFree);
+    console.log(dairyFree);
+  if (dairyFree === "t"){
+      return <CheckCircle className='info-icon'/>
+   }
+}
 
 
 
@@ -71,15 +67,15 @@ class RecipeInfo extends Component {
     let recipe_id = this.props.match.params.recipe_id;
     console.log('xxyyhhyyhhhyy' + this.state.recipe.diets );
 
-    var displayItem = (<span />); // default, this will render an empty span on the page so nothing shows up.
-      if (this.state.recipe.diets) {
-        if (this.state.recipe.diets.includes("vegan")) {
-          displayItem = (<Leaf/>);
-        }
-        else if (this.state.recipe.diets.includes("gluten free")) {
-           displayItem = (<CheckCircle/>);
-        }
-      }
+    //var displayItem = (<span />); // default, this will render an empty span on the page so nothing shows up.
+      // if (this.state.recipe.diets) {
+      //   if (this.state.recipe.diets.includes("vegan")) {
+      //     displayItem = (<Leaf/>);
+      //   }
+      //   else if (this.state.recipe.diets.includes("gluten free")) {
+      //      displayItem = (<CheckCircle/>);
+      //   }
+      // }
 
 
     // let allergy_1 = this.state.recipe.diets;
@@ -111,21 +107,18 @@ class RecipeInfo extends Component {
                   <li className='info-icons-spcing'><Heart className='info-icon-size
                     '/> {this.state.recipe.weightWatcherSmartPoints} points of weight watcher </li>
 
-                  <li className='info-icons-spcing'>
-                    {displayItem}
-                    {/* { this.Gluten ? <Leaf className='info-icon-size
-                    '/> : " "} gluten free */}
-                    {/* {this.Gluten} */}
 
-                  </li>
-                  {displayItem}
+                  {this.gluten() ? (
+                    <li className='info-icons-spcing'>
+                      <Leaf className='info-icon-size' />
+                    </li>)
+                  : null}
 
-
-                  <li className='info-icons-spcing'>
-                    {/* { this.Dairy ? <CheckCircle className='info-icon-size'/> : " "} dairy free */}
-                    {/* {this.Dairy} */}
-
-                  </li>
+                  {this.dairy() ?
+                    <li className='info-icons-spcing'>
+                      <CheckCircle className='info-icon-size'/>
+                    </li>
+                  : null}
 
                     {/* <Leaf className='info-icon-size'/>{this.state.recipe.diets} </li>
                   <li><CheckCircle className='info-icon-size'/> {this.state.recipe.diets}</li>
@@ -145,6 +138,8 @@ class RecipeInfo extends Component {
 
             <p>Preperation Time :- {this.state.recipe.prep_time} minutes</p>
             <p>Cooking Time :- {this.state.recipe.cook_time} minutes</p>
+          <p>Gluten free :- {this.state.recipe.gluten}</p>
+        <p>Dairy free :- {this.state.recipe.dairy}</p>
             <p>{this.state.recipe.diets}</p>
 
             <p className='info-instructions'>{this.state.recipe.instructions}</p>

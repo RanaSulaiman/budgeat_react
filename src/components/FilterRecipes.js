@@ -23,13 +23,14 @@ class FilterRecipes extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      allRecipes: []
+      allRecipes: [],
+      loading: true
     };
   }
 
   componentDidMount(){
     fetchRailsData().then((data) => {
-      this.setState({allRecipes: data});
+      this.setState({allRecipes: data, loading: false});
       console.log(this.state.allRecipes);
 
     });
@@ -41,7 +42,7 @@ class FilterRecipes extends Component {
     console.log("xxxxxxxxxxxxx");
 		return (
       <div>
-        <FilterableRecipeTable recipes={this.state.allRecipes}/>
+        <FilterableRecipeTable recipes={this.state.allRecipes} loading={this.state.loading} />
       {/* this.state.allrecipes */}
       </div>
 

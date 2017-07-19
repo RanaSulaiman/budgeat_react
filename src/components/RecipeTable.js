@@ -54,10 +54,11 @@ class RecipeTable extends Component {
 
 
     return (
-    <div classNmae='container'>
+    <div className='container'>
       <ul className='row'>
+        {!this.props.loading && intoleranceTimeCostDishTypeFilteredList.length === 0 ? <div>no results</div> : null}
           {intoleranceTimeCostDishTypeFilteredList.map((recipe,recipe_id)=>
-            <li className='col-sm-4'>
+            <li className='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
               <RecipeRow key={recipe_id} {...recipe}/>
             </li>
           )}

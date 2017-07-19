@@ -37,7 +37,6 @@ class App extends Component {
               </div>
             </div>
 
-                <footer className='footer'></footer>
 
 							<Switch>
 								<Route exact path='/' component={Home} />
@@ -46,6 +45,8 @@ class App extends Component {
                 <Route exact path='/Recipe/:recipe_id' component={RecipeInfo} />
 
 							</Switch>
+
+              <footer className='footer'>Footer</footer>
 						</div>
 					</Router>
 			/* </div> */
