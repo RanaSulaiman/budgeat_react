@@ -43,7 +43,6 @@ class App extends Component {
 								<Route exact path='/Contact' component={Contact} />
 								<Route exact path='/FilterRecipes' component={FilterRecipes} />
                 <Route exact path='/Recipe/:recipe_id' component={RecipeInfo} />
-
 							</Switch>
 
               <footer className='footer'>Footer</footer>

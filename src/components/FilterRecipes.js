@@ -1,3 +1,5 @@
+
+// jj
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Foundation from 'react-foundation'
@@ -24,8 +26,33 @@ class FilterRecipes extends Component {
     super(props);
     this.state = {
       allRecipes: [],
-      loading: true
+      loading: true,
+      currentPage: 1,
+      lastPage: 1,
+      recipesPerPage: 24
     };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(event){
+    this.setState({
+      currentPage: Number(event.target.id)
+    });
+  }
+
+  previousPage(){
+    // let page = Number(event.target.page);
+    let page = this.state.currentPage;
+
+    let prevPage = page - 1;
+    console.log("xxxxx currentPage: " + page);
+    console.log("xxxxx prevPage: " + prevPage);
+
+    if (page > 1) {
+      this.setState({
+        currentPage: prevPage
+      });
+    }
   }
 
   componentDidMount(){
@@ -39,14 +66,45 @@ class FilterRecipes extends Component {
 
 	render() {
     // console(this.state.allRecipes)
-    console.log("xxxxxxxxxxxxx");
-		return (
-      <div>
-        <FilterableRecipeTable recipes={this.state.allRecipes} loading={this.state.loading} />
-      {/* this.state.allrecipes */}
-      </div>
+    // console.log("xxxxxxxxxxxxx");
+    const { allRecipes, currentPage, recipesPerPage } = this.state;
+    // this.setState({lastPage: Math.ceil(allRecipes.length / recipesPerPage)});
+    // const lastPage = this.state.lastPage;
 
-		);
+    // Logic for displaying current recipes
+    const indexOfLastRecipe = currentPage * recipesPerPage;
+    const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
+    const currentRecipes = allRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe);
+
+    // Logic for displaying page numbers
+    const pageNumbers = [];
+    for (let i = 1; i <= Math.ceil(allRecipes.length / recipesPerPage); i++) {
+      pageNumbers.push(i);
+    }
+
+    const renderPageNumbers = pageNumbers.map(number => {
+      return (
+        <li
+          key={number}
+          id={number}
+          onClick={this.handleClick}
+        >
+          {number}
+        </li>
+      );
+    });
+    console.log("xxxx render currentPage:" + currentPage);
+    return (
+      <div>
+        <FilterableRecipeTable recipes={currentRecipes} loading={this.state.loading} />
+        <ul id="page-numbers">
+          <li page={currentPage}
+              onClick={this.previousPage}
+          >{"<"}</li>
+          {renderPageNumbers}
+        </ul>
+      </div>
+    );
 	}
 }
 
