@@ -16,12 +16,15 @@ import CheckCircle from 'react-icons/lib/md/check-circle';
 import HighlightRemove from 'react-icons/lib/md/highlight-remove'
 
 // images
-import gluten from '../images/gluten.png'
+import wheat from '../images/wheat.png'
 import dairy from '../images/dairy.png'
 import vegetarian from '../images/vegetarian.png'
-// import wheat from '../images/wheat.png'
-
-
+import vegan from '../images/vegan.png'
+import money from '../images/money.png'
+import heart from '../images/heart.png'
+import health from '../images/health.png'
+import cow from '../images/cow.png'
+import clock from '../images/clock.png'
 
 
 
@@ -36,30 +39,41 @@ class RecipeInfo extends Component {
   // For summary icons - conditional rendering
   gluten() {
     var glutenFree = this.state.recipe.gluten;
-   if (glutenFree === "t"){
-       return <Leaf className='info-icon-size'/>
+    if (glutenFree === "t"){
+      return true
+    } else {
+      return false
     }
- }
+  }
 
- dairy() {
-   var dairyFree = this.state.recipe.dairy;
-   console.log('in Dairy Function = ' + dairyFree);
+  dairy() {
+    var dairyFree = this.state.recipe.dairy;
+    console.log('in Dairy Function = ' + dairyFree);
     console.log(dairyFree);
-  if (dairyFree === "t"){
-      return <CheckCircle className='info-icon'/>
-   }
- }
+    if (dairyFree === "t"){
+      return true
+    } else {
+      return false
+    }
+  }
 
- vegetarian() {
-   var vegetarian = this.state.recipe.vegetarian;
-  if (vegetarian === "t"){
-      return <img src={vegetarian} className='info-img'/>
-   }
- }
+  vegetarian() {
+    var vegetarian = this.state.recipe.vegetarian;
+    if (vegetarian === "t"){
+      return true
+    } else {
+      return false
+    }
+  }
 
-
-
-
+  vegan() {
+    var vegan = this.state.recipe.vegan;
+    if (vegan === "t"){
+      return true
+    } else {
+      return false
+    }
+  }
 
   componentDidMount(){
     let recipe_id = this.props.match.params.recipe_id;
@@ -79,9 +93,6 @@ class RecipeInfo extends Component {
   render() {
     console.log("Rendering RecipeInfo");
     console.log("RecipeInfo.state = ", this.state);
-    // if (!this.state.recipe) {
-    //   return <div>Loading</div>
-    // }
     let recipe_id = this.props.match.params.recipe_id;
     console.log('xxyyhhyyhhhyy' + this.state.recipe.diets );
 
@@ -100,32 +111,34 @@ class RecipeInfo extends Component {
 
               <div className='col-sm-6'>
                 <ul className='info-icons-list'>
-                  <li className='info-icons-spcing'><Money className='info-icon-size
-                    '/> $ {Number(((this.state.recipe.price_serving)/100).toFixed(2))} per serving </li>
-                  <li className='info-icons-spcing'><Stopwatch className='info-icon-size
-                    '/> ready in  {this.state.recipe.ready_time} minutes </li>
-                  <li className='info-icons-spcing'><Heart className='info-icon-size
-                    '/> {this.state.recipe.weightWatcherSmartPoints} points of weight watcher </li>
+                  <li className='info-icons-spcing'><img src={money} className='info-img'/> $ {Number(((this.state.recipe.price_serving)/100).toFixed(2))} per serving </li>
+                  <li className='info-icons-spcing'><img src={clock} className='info-img'/> ready in  {this.state.recipe.ready_time} minutes </li>
+                  <li className='info-icons-spcing'><img src={health} className='info-img'
+                  /> {this.state.recipe.weightWatcherSmartPoints} weight watcher points </li>
                   {/* To skip rendering empty tag(spce in the browser) if the output is null */}
                   {this.gluten() ? (
                     <li className='info-icons-spcing'>
-                      <Leaf className='info-icon-size' />
+                      <img src={wheat} className='info-img' /> gluten free
                     </li>)
                   : null}
 
                   {this.dairy() ?
                     <li className='info-icons-spcing'>
-                      <CheckCircle className='info-icon-size'/>
+                      <img src={dairy} className='info-img'/> dairy free
                     </li>
                   : null}
 
                   {this.vegetarian() ?
                     <li className='info-icons-spcing'>
-                      <img className='info-img' src={vegetarian} />
+                      <img className='info-img' src={vegetarian} /> vegetarian
                     </li>
                   : null}
 
-                  {/* <li><img src={wheat} width='30' color="red"/></li> */}
+                  {this.vegan() ?
+                    <li className='info-icons-spcing'>
+                      <img className='info-img' src={cow} /> vegan
+                    </li>
+                  : null}
 
                 </ul>
 
@@ -142,7 +155,7 @@ class RecipeInfo extends Component {
             <p>Gluten free :- {this.state.recipe.gluten}</p>
             <p>Dairy free :- {this.state.recipe.dairy}</p>
           <p>{this.state.recipe.vegan}</p>
-        <p>{this.state.recipe.vegetarian}</p>
+          <p>{this.state.recipe.vegetarian}</p>
 
 
             <p className='info-instructions'>{this.state.recipe.instructions}</p>

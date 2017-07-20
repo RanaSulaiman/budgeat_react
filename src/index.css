@@ -112,7 +112,7 @@ li{
   /*display: flex;
   flex-direction: column;
   align-items:flex-start;*/
-  font-size: .8em;
+  /*font-size: .8em;*/
   font-weight: bold;
   margin-left: 70px;
 }
@@ -124,9 +124,8 @@ li{
 
 }
 .info-icons-spcing{
-  height: 60px;
+  height: 50px;
 }
-
 .info-title{
   height: 50px;
   text-align: left;
