@@ -27,5 +27,7 @@
     "dotenv": "^4.0.0",
     "eslint": "^4.2.0",
     "eslint-plugin-render-if": "^0.1.0"
-  }
+  },
+  "homepage": "https://RanaSulaiman.github.io/budgeat_react"
+
 }
