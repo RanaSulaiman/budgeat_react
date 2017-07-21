@@ -164,8 +164,6 @@ class FilterRecipes extends Component {
     const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
     const currentRecipes = filteredRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe);
 
-
-
     // Logic for displaying page numbers
     const pageNumbers = [];
     for (let i = 1; i <= Math.ceil(filteredRecipes.length / recipesPerPage); i++) {
@@ -205,7 +203,6 @@ class FilterRecipes extends Component {
           {/* <ul id='page-numbers' className='row text-center'> */}
           <ul id='page-numbers' className='row text-center'>
             {/* <div> */}
-
             <li className='previous' page={currentPage}
                 onClick={() => this.clickPreviousPage()}
             >{"<"}</li>
