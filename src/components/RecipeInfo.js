@@ -14,7 +14,7 @@ import dairy from '../images/dairy.png'
 import vegetarian from '../images/vegetarian.png'
 import vegan from '../images/vegan.png'
 import money from '../images/money.png'
-import heart from '../images/heart.png'
+// import heart from '../images/heart.png'
 import health from '../images/health.png'
 import cow from '../images/cow.png'
 import clock from '../images/clock.png'
@@ -103,10 +103,10 @@ class RecipeInfo extends Component {
               </div>{/* img_sourcelink column*/}
 
               <div className='col-sm-6'>
-                {/* <Leaf color='#DC2424' size='1.5em'/>money
-                <Leaf color='#215f00' size='1.5em'/>money
-                <Stopwatch color='#AA076B' size='1.5em'/>heart
-                <Stopwatch color='#FF512F' size='1.5em'/>clock */}
+                {/* <Leaf color='#DC2424' size='1.5em'/>red */}
+                {/* <Leaf color='#215f00' size='1.5em'/>green  */}
+                {/* <Stopwatch color='#AA076B' size='1.5em'/>purple */}
+                {/* <Stopwatch color='#FF512F' size='1.5em'/>clock */}
                 <ul className='info-icons-list'>
                   <li className='info-icons-spcing'><img src={money} className='info-img'/> $ {Number(((this.state.recipe.price_serving)/100).toFixed(2))} per serving </li>
                   <li className='info-icons-spcing'><img src={clock} className='info-img'/> ready in  {this.state.recipe.ready_time} minutes </li>
@@ -153,12 +153,12 @@ class RecipeInfo extends Component {
             <p>Dairy free :- {this.state.recipe.dairy}</p>
             <p>Vegan:- {this.state.recipe.vegan}</p>
             <p>Vegetarian:- {this.state.recipe.vegetarian}</p>
-
             <p className='info-instructions'>{this.state.recipe.instructions}</p>
             </div>
 
         </div>//container
     );
   }
+  
 }
 export default RecipeInfo

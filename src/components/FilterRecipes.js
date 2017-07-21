@@ -145,20 +145,26 @@ class FilterRecipes extends Component {
       });
     }
 
-    this.setState({ currentPage: 1, filteredRecipes: filteredList })
+    this.setState({currentPage: 1, filteredRecipes: filteredList, lastPage: Math.ceil(filteredList.length / this.state.recipesPerPage)})
   }
+
+  // this.setState({lastPage: Math.ceil(filteredRecipes.length / recipesPerPage)});
+
 
 	render() {
     // console(this.state.allRecipes)
     // console.log("xxxxxxxxxxxxx");
     const { filteredRecipes, currentPage, recipesPerPage } = this.state;
-    this.setState({lastPage: Math.ceil(filteredRecipes.length / recipesPerPage)});
     // const lastPage = this.state.lastPage;
+
+    // Was here
 
     // Logic for displaying current recipes
     const indexOfLastRecipe = currentPage * recipesPerPage;
     const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
     const currentRecipes = filteredRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe);
+
+
 
     // Logic for displaying page numbers
     const pageNumbers = [];
@@ -198,16 +204,19 @@ class FilterRecipes extends Component {
         {/* <div className='container'> */}
           {/* <ul id='page-numbers' className='row text-center'> */}
           <ul id='page-numbers' className='row text-center'>
+            {/* <div> */}
 
-            <li classsNmae='previous'page={currentPage}
+            <li className='previous' page={currentPage}
                 onClick={() => this.clickPreviousPage()}
             >{"<"}</li>
             {renderPageNumbers}
-            <li classsNmae='next'page={currentPage}
+            <li className='next' page={currentPage}
                 onClick={() => this.clickNextPage()}
             >{">"}</li>
+          {/* </div> */}
+
           </ul>
-        {/* </div>{/*container*/} 
+        {/* </div>{/*container*/}
       </div>
     );
 	}

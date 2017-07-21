@@ -23,6 +23,7 @@ class RecipeTable extends Component {
     );
   }
 
+
 }
 
 export default RecipeTable;
