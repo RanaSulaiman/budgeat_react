@@ -160,5 +160,6 @@ li{
 #page-numbers {
   display: flex;
   flex-wrap: wrap;
+  text-align: justify;
 
 }

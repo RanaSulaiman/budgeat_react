@@ -14,12 +14,9 @@ import dairy from '../images/dairy.png'
 import vegetarian from '../images/vegetarian.png'
 import vegan from '../images/vegan.png'
 import money from '../images/money.png'
-// import heart from '../images/heart.png'
 import health from '../images/health.png'
 import cow from '../images/cow.png'
 import clock from '../images/clock.png'
-
-
 
 class RecipeInfo extends Component {
 
@@ -159,6 +156,6 @@ class RecipeInfo extends Component {
         </div>//container
     );
   }
-  
+
 }
 export default RecipeInfo

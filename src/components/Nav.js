@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import Home from './Home'
 import Contact from './Contact'
-// import FilterRecipes from './FilterRecipes'
 
 //main navigation
 import Search from 'react-icons/lib/fa/search';
@@ -25,7 +24,7 @@ export const Nav = () => (
         <p className='col-2'><AttachMoney className='logo-icon'/></p>
     </div>
 
-    <ul className={'nav-display' } >
+    <ul className={'nav-display'} >
 
     <li className='col-sm-3'>
       <Link activeClassName='active' to='/'>

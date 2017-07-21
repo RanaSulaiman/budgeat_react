@@ -199,7 +199,7 @@ class FilterRecipes extends Component {
           loading={this.state.loading}
           onFilterUpdate={this.onFilterUpate}
         />
-        {/* <div className='container'> */}
+        <div className='container'>
           {/* <ul id='page-numbers' className='row text-center'> */}
           <ul id='page-numbers' className='row text-center'>
             {/* <div> */}
@@ -213,7 +213,7 @@ class FilterRecipes extends Component {
           {/* </div> */}
 
           </ul>
-        {/* </div>{/*container*/}
+        </div>{/*container*/}
       </div>
     );
 	}
