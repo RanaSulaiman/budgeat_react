@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 export const fetchRailsData = () => {
-    var url = 'http://localhost:4000/recipes';
+    var url = 'http://production.hfu4buysj5.us-west-2.elasticbeanstalk.com/recipes';
 
     return axios.get(url)
       .then(function (response) {

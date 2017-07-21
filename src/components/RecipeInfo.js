@@ -68,7 +68,7 @@ class RecipeInfo extends Component {
   componentDidMount(){
     let recipe_id = this.props.match.params.recipe_id;
 
-    axios.get('http://localhost:4000/recipes/' + recipe_id)
+    axios.get('http://production.hfu4buysj5.us-west-2.elasticbeanstalk.com/recipes/' + recipe_id)
       .then((response)=>{
         const recipe = response.data;
           this.setState({ recipe });
