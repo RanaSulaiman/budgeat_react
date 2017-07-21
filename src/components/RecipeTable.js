@@ -4,62 +4,14 @@ import RecipeRow from './RecipeRow'
 
 class RecipeTable extends Component {
   render(){
-    var dishtypeFilteredList = [];
-    var costDishTypeFilteredList = [];
-    var timeCostDishTypeFilteredList = [];
-    var intoleranceTimeCostDishTypeFilteredList = [];
-    // console.log("xxx dishtypeFilterText: " + this.props.dishtypeFilterText);
-
-    if(this.props.dishtypeFilterText !== '') {
-      this.props.recipes.forEach((recipe) =>{
-        // console.log("cuisine filter: " + this.props.cuisineFilterText);
-        // console.log("recipe cuisines: " + recipe.cuisines);
-        if(recipe.dish_type.includes(this.props.dishtypeFilterText)){
-          dishtypeFilteredList.push(recipe);
-        }
-      }); //forEach
-    } else {
-      dishtypeFilteredList = this.props.recipes;
-    }
-
-    if(this.props.costFilterText !== "0") {
-      dishtypeFilteredList.forEach((recipe) =>{
-        if(recipe.price_serving <= Number(this.props.costFilterText)){
-          costDishTypeFilteredList.push(recipe);
-        }
-      }); //forEach
-    } else {
-      costDishTypeFilteredList = dishtypeFilteredList;
-    }
-
-    if (this.props.timeFilterText !== "0") {
-        costDishTypeFilteredList.forEach((recipe) =>{
-          if(recipe.ready_time <= Number(this.props.timeFilterText)){
-            timeCostDishTypeFilteredList.push(recipe);
-          }
-        }); //forEach
-    } else {
-      timeCostDishTypeFilteredList = costDishTypeFilteredList;
-    }
-
-    if (this.props.intoleranceFilterText !== '') {
-        timeCostDishTypeFilteredList.forEach((recipe) =>{
-          if(recipe.diets.includes(this.props.intoleranceFilterText)){
-            intoleranceTimeCostDishTypeFilteredList.push(recipe);
-          }
-        }); //forEach
-    } else {
-      intoleranceTimeCostDishTypeFilteredList = timeCostDishTypeFilteredList;
-    }
-
 
     return (
     <div className='container'>
       <ul className='row'>
-        {!this.props.loading && intoleranceTimeCostDishTypeFilteredList.length === 0 ? <div>no results</div> : null}
-          {intoleranceTimeCostDishTypeFilteredList.map((recipe,recipe_id)=>
+        {!this.props.loading && this.props.recipes.length === 0 ? <div>no results</div> : null}
+          {this.props.recipes.map((recipe)=>
             <li className='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
-              <RecipeRow key={recipe_id} {...recipe}/>
+              <RecipeRow key={recipe.recipe_id} {...recipe}/>
             </li>
           )}
       </ul>

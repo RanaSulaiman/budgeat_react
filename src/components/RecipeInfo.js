@@ -158,6 +158,9 @@ class RecipeInfo extends Component {
 
 
             <p className='info-instructions'>{this.state.recipe.instructions}</p>
+
+
+            {/* Test */}
             </div>
 
         </div>
