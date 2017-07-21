@@ -4,15 +4,9 @@ import axios from 'axios'
 //react-icons
 import Leaf from 'react-icons/lib/fa/leaf';
 
-// import Leaf from 'react-icons/lib/ti/leaf';
-// import AccessTime from 'react-icons/lib/md/access-time';
-// import Stopwatch from 'react-icons/lib/ti/stopwatch';
+import Stopwatch from 'react-icons/lib/ti/stopwatch';
 // import Heart from 'react-icons/lib/ti/heart';
-// import Money from 'react-icons/lib/fa/money';
 
-// Checked and nonChecked
-import CheckCircle from 'react-icons/lib/md/check-circle';
-import HighlightRemove from 'react-icons/lib/md/highlight-remove'
 
 // images
 import wheat from '../images/wheat.png'
@@ -109,6 +103,10 @@ class RecipeInfo extends Component {
               </div>{/* img_sourcelink column*/}
 
               <div className='col-sm-6'>
+                {/* <Leaf color='#DC2424' size='1.5em'/>money
+                <Leaf color='#215f00' size='1.5em'/>money
+                <Stopwatch color='#AA076B' size='1.5em'/>heart
+                <Stopwatch color='#FF512F' size='1.5em'/>clock */}
                 <ul className='info-icons-list'>
                   <li className='info-icons-spcing'><img src={money} className='info-img'/> $ {Number(((this.state.recipe.price_serving)/100).toFixed(2))} per serving </li>
                   <li className='info-icons-spcing'><img src={clock} className='info-img'/> ready in  {this.state.recipe.ready_time} minutes </li>
@@ -153,17 +151,13 @@ class RecipeInfo extends Component {
             <p>Cooking Time :- {this.state.recipe.cook_time} minutes</p>
             <p>Gluten free :- {this.state.recipe.gluten}</p>
             <p>Dairy free :- {this.state.recipe.dairy}</p>
-          <p>{this.state.recipe.vegan}</p>
-          <p>{this.state.recipe.vegetarian}</p>
-
+            <p>Vegan:- {this.state.recipe.vegan}</p>
+            <p>Vegetarian:- {this.state.recipe.vegetarian}</p>
 
             <p className='info-instructions'>{this.state.recipe.instructions}</p>
-
-
-            {/* Test */}
             </div>
 
-        </div>
+        </div>//container
     );
   }
 }

@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-import {Button} from 'react-bootstrap';
-
-
 class ButtonCost extends Component {
   constructor(props) {
   super(props);
@@ -27,7 +24,7 @@ class ButtonCost extends Component {
           <option value='250'>under $2.5</option>
           <option value='500'>under $3.0</option>
           <option value='500'>under $4.0</option>
-
+          <option value='500'>under $5.0</option>
         </select>
       </div>
     );

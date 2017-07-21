@@ -1,6 +1,10 @@
+// Function: Returns recipes list in the main page
+// Gets called by: FilterableRecipeTable
+// Calls: RecipeRow
+
+
 import React, { Component } from 'react'
 import RecipeRow from './RecipeRow'
-
 
 class RecipeTable extends Component {
   render(){

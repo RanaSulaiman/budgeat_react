@@ -1,18 +1,17 @@
+// Function: Returns filtered buttons and recipes list
+// Gets called by: FilterRecipes
+// Calls: the 4 buttons and RecipeTable
+
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, Switch } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-
-import Nav from './Nav'
 import ButtonCost from './ButtonCost'
 import ButtonTime from './ButtonTime'
 import ButtonDishType from './ButtonDishType'
 import ButtonIntolerance from './ButtonIntolerance'
 import RecipeTable from './RecipeTable'
-import ButtonTest from './ButtonTest'
-// import { SplitButton } from 'react-bootstrap';
-// import { MenuItem } from 'react-bootstrap';
 
 class FilterableRecipeTable extends Component {
 	render() {

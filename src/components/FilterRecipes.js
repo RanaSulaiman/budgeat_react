@@ -1,10 +1,12 @@
+// Function: Gets recipes data from API
+// Returns 1-FilterableRecipeTable(filtered buttons and recipes list) 2-pagination
+// Gets called by: App.js
+// Calls: FilterableRecipeTable
 
-// jj
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Foundation from 'react-foundation'
 import PropTypes from 'prop-types'
-// import ReactRouter from 'react-router-dom'
 import {
   BrowserRouter as Router,
   Route,
@@ -17,11 +19,7 @@ import FilterableRecipeTable from './FilterableRecipeTable'
 
 import {fetchRailsData} from '../utils/RailsApi'
 
-// hardcoded data
-
 class FilterRecipes extends Component {
-  // constructor
-  // allRecipes: call functon
   constructor(props) {
     super(props);
     this.state = {
@@ -79,7 +77,7 @@ class FilterRecipes extends Component {
     });
   }
 
-  clickPreviousPage(props){
+  clickPreviousPage(){
     // let page = Number(event.target.page);
     // var page = this.props.currentPage;
     var page = this.state.currentPage;
@@ -92,6 +90,21 @@ class FilterRecipes extends Component {
       console.log('I am in the if statement');
       this.setState({
         currentPage: prevPage
+      });
+    }
+  }
+
+  clickNextPage(){
+    // let page = Number(event.target.page);
+    // var page = this.props.currentPage;
+    var page = this.state.currentPage;
+    var lastPage = this.state.lastPage;
+
+    var nextPage = page + 1;
+
+    if (page < lastPage) {
+      this.setState({
+        currentPage: nextPage
       });
     }
   }
@@ -111,25 +124,25 @@ class FilterRecipes extends Component {
         // console.log("cuisine filter: " + this.props.cuisineFilterText);
         // console.log("recipe cuisines: " + recipe.cuisines);
         return recipe.dish_type.includes(this.state.dishtypeFilterText);
-      }); //forEach
+      });
     }
 
     if(this.state.costFilterText !== "0") {
       filteredList = filteredList.filter((recipe) => {
         return recipe.price_serving <= Number(this.state.costFilterText);
-      }); //forEach
+      });
     }
 
     if (this.state.timeFilterText !== "0") {
       filteredList = filteredList.filter((recipe) => {
         return recipe.ready_time <= Number(this.state.timeFilterText);
-      }); //forEach
+      });
     }
 
     if (this.state.intoleranceFilterText !== '') {
       filteredList = filteredList.filter((recipe) => {
         return recipe.diets.includes(this.state.intoleranceFilterText);
-      }); //forEach
+      });
     }
 
     this.setState({ currentPage: 1, filteredRecipes: filteredList })
@@ -139,7 +152,7 @@ class FilterRecipes extends Component {
     // console(this.state.allRecipes)
     // console.log("xxxxxxxxxxxxx");
     const { filteredRecipes, currentPage, recipesPerPage } = this.state;
-    // this.setState({lastPage: Math.ceil(filteredRecipes.length / recipesPerPage)});
+    this.setState({lastPage: Math.ceil(filteredRecipes.length / recipesPerPage)});
     // const lastPage = this.state.lastPage;
 
     // Logic for displaying current recipes
@@ -160,7 +173,7 @@ class FilterRecipes extends Component {
           id={number}
           onClick={this.handleClick}
         >
-          {number}
+        {number}
         </li>
       );
     });
@@ -182,12 +195,19 @@ class FilterRecipes extends Component {
           loading={this.state.loading}
           onFilterUpdate={this.onFilterUpate}
         />
-        <ul id="page-numbers">
-          <li page={currentPage}
-              onClick={() => this.clickPreviousPage(currentPage)}
-          >{"<"}</li>
-          {renderPageNumbers}
-        </ul>
+        {/* <div className='container'> */}
+          {/* <ul id='page-numbers' className='row text-center'> */}
+          <ul id='page-numbers' className='row text-center'>
+
+            <li classsNmae='previous'page={currentPage}
+                onClick={() => this.clickPreviousPage()}
+            >{"<"}</li>
+            {renderPageNumbers}
+            <li classsNmae='next'page={currentPage}
+                onClick={() => this.clickNextPage()}
+            >{">"}</li>
+          </ul>
+        {/* </div>{/*container*/} 
       </div>
     );
 	}
