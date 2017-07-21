@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 export const fetchRailsData = () => {
-    var url = 'http://production.hfu4buysj5.us-west-2.elasticbeanstalk.com/recipes';
+    var url = 'https://api.budgeat.net/recipes';
 
     return axios.get(url)
       .then(function (response) {
