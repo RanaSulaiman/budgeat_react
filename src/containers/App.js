@@ -24,7 +24,6 @@ import RailsApi from '../utils/RailsApi'
 class App extends Component {
 	render() {
 		return (
-			// <div>
 				<Router>
           <div>
 						 <div /*className='container'*/>
@@ -46,7 +45,6 @@ class App extends Component {
               <footer className='footer'>Footer</footer>
 						</div>
 					</Router>
-			/* </div> */
 		);
 	}
 

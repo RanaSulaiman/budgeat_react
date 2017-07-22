@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 
 export const Home = () => (
-  <div className='container'>
-    <h1>A word from the author</h1>
+  <div className='container home'>
+    <h1>A word from Author</h1>
     <p className='text-justify'>
       The available data indicates that the great majority of low-income Americans not only understand the importance of healthy eating but also they want to know more about how to do so. The biggest barriers are cost and time.
     </p>

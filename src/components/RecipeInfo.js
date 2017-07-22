@@ -5,8 +5,6 @@ import axios from 'axios'
 import Leaf from 'react-icons/lib/fa/leaf';
 
 import Stopwatch from 'react-icons/lib/ti/stopwatch';
-// import Heart from 'react-icons/lib/ti/heart';
-
 
 // images
 import wheat from '../images/wheat.png'
@@ -88,10 +86,9 @@ class RecipeInfo extends Component {
 
     return(
         <div className='container'>
-          <h1>Detail for recipe # {recipe_id}</h1>
+          {/* <h1>Detail for recipe # {recipe_id}</h1> */}
           {/* <h1>{this.state.recipe.sourceName}</h1> */}
             <h1 className ='info-title'>{this.state.recipe.title}</h1>
-
 
             <div className='row'>
               <div className='col-sm-6'>
@@ -100,10 +97,6 @@ class RecipeInfo extends Component {
               </div>{/* img_sourcelink column*/}
 
               <div className='col-sm-6'>
-                {/* <Leaf color='#DC2424' size='1.5em'/>red */}
-                {/* <Leaf color='#215f00' size='1.5em'/>green  */}
-                {/* <Stopwatch color='#AA076B' size='1.5em'/>purple */}
-                {/* <Stopwatch color='#FF512F' size='1.5em'/>clock */}
                 <ul className='info-icons-list'>
                   <li className='info-icons-spcing'><img src={money} className='info-img'/> $ {Number(((this.state.recipe.price_serving)/100).toFixed(2))} per serving </li>
                   <li className='info-icons-spcing'><img src={clock} className='info-img'/> ready in  {this.state.recipe.ready_time} minutes </li>
@@ -139,19 +132,29 @@ class RecipeInfo extends Component {
               </div>{/*icons column*/}
             </div>{/*row*/}
 
-            <div className='details'>{/*details is not used*/}
-            <p>WeightWatcherSmartPoints :- {this.state.recipe.weightWatcherSmartPoints}</p>
-            <p>Servings :- {this.state.recipe.servings}</p>
-            <p>Price_Serving:- $ {Number(((this.state.recipe.price_serving)/100).toFixed(2))}</p>
+            <table className='table'>
+              <tbody>
+                <tr>
+                  <td className="col-md-4 col-xs-6"><strong>Number of Servings: </strong></td>
+                  <td>{this.state.recipe.servings}</td>
+                </tr>
+                <tr>
+                  <td><strong>Cooking Time in minutes: </strong></td>
+                  <td>{this.state.recipe.cook_time}</td>
+                </tr>
+                <tr>
+                  <td><strong>Preparation Time minutes: </strong></td>
+                  <td>{this.state.recipe.prep_time}</td>
+                </tr>
+              </tbody>
+            </table>
 
-            <p>Preperation Time :- {this.state.recipe.prep_time} minutes</p>
-            <p>Cooking Time :- {this.state.recipe.cook_time} minutes</p>
-            <p>Gluten free :- {this.state.recipe.gluten}</p>
-            <p>Dairy free :- {this.state.recipe.dairy}</p>
-            <p>Vegan:- {this.state.recipe.vegan}</p>
-            <p>Vegetarian:- {this.state.recipe.vegetarian}</p>
-            <p className='info-instructions'>{this.state.recipe.instructions}</p>
+            <div>
+              <h3>Instructions</h3>
+              <p className='info-instructions'>{this.state.recipe.instructions}</p>
             </div>
+
+            {/* </div> */}
 
         </div>//container
     );
