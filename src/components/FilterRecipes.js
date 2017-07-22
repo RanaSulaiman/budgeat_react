@@ -95,10 +95,8 @@ class FilterRecipes extends Component {
   }
 
   clickNextPage(){
-    // let page = Number(event.target.page);
-    // var page = this.props.currentPage;
     var page = this.state.currentPage;
-    var lastPage = this.state.lastPage;
+    var lastPage = Math.ceil(this.state.filteredRecipes.length / this.state.recipesPerPage);
 
     var nextPage = page + 1;
 
@@ -172,20 +170,22 @@ class FilterRecipes extends Component {
 
     const renderPageNumbers = pageNumbers.map(number => {
       return (
-        <li
+        <a
+          className='page-link'
+          href='#'
           key={number}
           id={number}
           onClick={this.handleClick}
         >
         {number}
-        </li>
+        </a>
       );
     });
 
     console.log("xxxx render currentPage:" + currentPage);
     // onFilterUpate will fix pagination after filter change
     return (
-      <div>
+      <div className='container'>
         <FilterableRecipeTable
           recipes={currentRecipes}
           dishtypeFilterText={this.state.dishtypeFilterText}
@@ -199,21 +199,24 @@ class FilterRecipes extends Component {
           loading={this.state.loading}
           onFilterUpdate={this.onFilterUpate}
         />
-        <div className='container'>
-          {/* <ul id='page-numbers' className='row text-center'> */}
-          <ul id='page-numbers' className='row text-center'>
-            {/* <div> */}
-            <li className='previous' page={currentPage}
-                onClick={() => this.clickPreviousPage()}
-            >{"<"}</li>
-            {renderPageNumbers}
-            <li className='next' page={currentPage}
-                onClick={() => this.clickNextPage()}
-            >{">"}</li>
-          {/* </div> */}
 
+{/* BOOTSTRAP VERSION */}
+        <nav aria-label="Search Page navigation text-center">
+          <ul className='pagination '>
+
+            <li className='page-item'
+                onClick={() => this.clickPreviousPage()}>
+              <a className='page-link' href='#'>Prev</a>
+            </li>
+
+            <li className='page-item'>{renderPageNumbers}</li>
+
+            <li className='page-item'
+                onClick={() => this.clickNextPage()}>
+              <a className="page-link" href='#'>Next</a>
+            </li>
           </ul>
-        </div>{/*container*/}
+        </nav>
       </div>
     );
 	}

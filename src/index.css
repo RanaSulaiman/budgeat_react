@@ -6,6 +6,7 @@ html {
 body {
   /*margin: 15px;
   padding: 15px;*/
+  /*min-height: 100%;*/
   font-family: Kavivanar ;
   font-size: 1.8em;
 }
@@ -72,20 +73,21 @@ li{
 
 }
 
-/*.footer {*/
-  /* just for demo */
-  /*background-color: #F8F8F8;
+.footer {
+   /*just for demo */
+  background-color: #F8F8F8;
   border-top: 1px solid #E7E7E7;
   text-align:center;
-  padding:20px;*/
- /* just for demo */
+  padding:20px;
 
-  /*position: absolute;
-  left: 0;
+  /*just for demo */
+
+  position: absolute;
+  margin-bottom:-60px;
   bottom: 0;
   height: 60px;
   width: 100%;
-}*/
+}
 
 
 /*Main search page styling*/
@@ -118,27 +120,35 @@ li{
   border: none;
 }
 
+/*.pag-num-disp {
+  border: solid;
+  display: flex;
+  flex-direction: row;
+  display: inline-block;
+
+}*/
+
 /*Pagination*/
 /*#page-numbers {
   list-style: none;
   display: flex;
 }*/
 
-#page-numbers {
+/*#page-numbers {
   display: flex;
   flex-wrap: wrap;
   text-align: justify;
-}
+}*/
 
-#page-numbers > li {
-  margin-right: 0.6em;
+/*#page-numbers > li {
+  margin-right: 0.3em;
   color: blue;
   user-select: none;
   cursor: pointer;
   height: 30px;
   width:30px;
   border: solid;
-}
+}*/
 
 
 /*RecipeInfo Styling*/
