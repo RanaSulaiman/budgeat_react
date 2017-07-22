@@ -201,7 +201,7 @@ class FilterRecipes extends Component {
         />
 
 {/* BOOTSTRAP VERSION */}
-        <nav aria-label="Search Page navigation text-center">
+        <nav aria-label='Search Page navigation' className='text-center'>
           <ul className='pagination '>
 
             <li className='page-item'
