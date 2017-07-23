@@ -108,7 +108,8 @@ li{
 }
 
 .home{
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
+  min-height: 30px;
 }
 
 /*All Button components*/

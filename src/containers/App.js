@@ -42,7 +42,8 @@ class App extends Component {
                 <Route exact path='/Recipe/:recipe_id' component={RecipeInfo} />
 							</Switch>
 
-              <footer className='footer'>Footer</footer>
+              <footer className='footer'>Footer
+              </footer>
 						</div>
 					</Router>
 		);
