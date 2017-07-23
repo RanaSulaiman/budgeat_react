@@ -21,14 +21,6 @@ export const Footer = () => (
 
             <a href='https://github.com/RanaSulaiman' target= '_blank'><GithubSquare className='footer-icon'/></a>
 
-            {/* <a href='https://github.com/RanaSulaiman' target= '_blank'><GitSquare className='footer-icon'/></a> */}
-
-
-            {/* <a href='mailto:her@gmail.com' target= '_blank'><Mail className='footer-icon'/></a>
-
-            <a href='mailto:her@gmail.com' target= '_blank'><MailRead className='footer-icon'/></a>
-
-            <a href='mailto:her@gmail.com' target= '_blank'><Mention className='footer-icon'/></a> */}
 
             <a href='mailto:her@gmail.com' target= '_blank'><FaEnvelopeSquare className='footer-icon'/></a>
 

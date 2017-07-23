@@ -68,9 +68,15 @@ li{
 }
 
 .header {
+  /*width: 100%;
+  position: fixed;*/
   height: 70px;
   background-color: green;
 }
+/*.page-header{
+  position: fixed;
+
+}*/
 
 .footer {
    /*just for demo */
