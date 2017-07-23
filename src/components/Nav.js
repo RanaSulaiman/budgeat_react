@@ -23,14 +23,14 @@ export const Nav = () => (
         <p className='col-2'><AttachMoney className='logo-icon'/></p>
       </div>
 
-      <ul className='nav-display text-center' >
-        <li className='col-lg-3 col-md-4 col-xsm-6'>
+      <ul className='nav-display' >
+        <li className='col-lg-4 col-md-5 col-xsm-6 text-center'>
           <Link activeClassName='active' to='/'>
           <HomeOutline className='nav-icon'/>
         </Link>
         </li>
 
-        <li className='col-lg-3 col-md-4 col-xsm-6'>
+        <li className='col-lg-4 col-md-5 col-xsm-6'>
           <Link activeClassName='active' to='/FilterRecipes'><Search className='nav-icon'/></Link>
         </li>
       </ul>

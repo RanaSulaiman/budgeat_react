@@ -26,25 +26,26 @@ class App extends Component {
 	render() {
 		return (
 				<Router>
-          <div>
+          <div >
 						 <div /*className='container'*/>
               <div /*className='row'*/ >
                 <header className='header'>
-                  <Nav className={"navbar","navbar-light", "bg-faded"}/>
+                  <Nav/>
                 </header>
-              </div>
-            </div>
+              </div>{/*row*/}
 
 
-							<Switch>
+
+							<Switch className='row'>
 								<Route exact path='/' component={Home} />
 								<Route exact path='/Contact' component={Contact} />
 								<Route exact path='/FilterRecipes' component={FilterRecipes} />
                 <Route exact path='/Recipe/:recipe_id' component={RecipeInfo} />
 							</Switch>
 
-              <Footer />
-						</div>
+              <Footer className='row'/>
+						  </div>
+            </div>{/*container*/}
 					</Router>
 		);
 	}
