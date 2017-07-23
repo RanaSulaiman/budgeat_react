@@ -23,7 +23,15 @@ h3 {
 .nav-display {
   display: flex;
   float: right;
-  padding-top: 20px;
+  padding: 15px;
+  /*letter-spacing: .1em;*/
+}
+
+.logo-display{
+  display: flex;
+  float: left;
+  padding-top: 15px;
+  text-align: center;
 }
 
 .logo-icon{
@@ -33,12 +41,6 @@ h3 {
 .app-name{
   color: white;
   font-size: 2em;
-}
-.logo-display{
-  display: flex;
-  float: left;
-  padding-top: 15px;
-  text-align: center;
 }
 
 
@@ -59,13 +61,13 @@ li{
 }
 
 
-.icons{
+/*.icons{
   padding-top: 50px;
-}
+}*/
 
-.active {
+/*.active {
   font-weight: bold;
-}
+}*/
 
 .header {
   /*width: 100%;

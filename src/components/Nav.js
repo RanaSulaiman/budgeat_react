@@ -7,7 +7,7 @@ import Contact from './Contact'
 //main navigation
 import Search from 'react-icons/lib/fa/search';
 import HomeOutline from 'react-icons/lib/ti/home-outline';
-import Message from 'react-icons/lib/md/message'
+// import Message from 'react-icons/lib/md/message'
 
 //Logo
 import AttachMoney from 'react-icons/lib/md/attach-money'
@@ -16,33 +16,26 @@ import AttachMoney from 'react-icons/lib/md/attach-money'
 export const Nav = () => (
 
   <div className='container-fluid'>
-    <div className={'row','logo-display'}>
-
-        {/* <p className='col-2'><RoomService className='logo-icon'/></p> */}
+    <div className='row'>
+      <div className='logo-display'>
         <p className='col-2'><AttachMoney className='logo-icon'/></p>
-        <p className='app-name'>BudgEat</p>
+        <p className='col-2 app-name'>BudgEat</p>
         <p className='col-2'><AttachMoney className='logo-icon'/></p>
-    </div>
+      </div>
 
-    <ul className={'nav-display'} >
+      <ul className='nav-display text-center' >
+        <li className='col-lg-3 col-md-4 col-xsm-6'>
+          <Link activeClassName='active' to='/'>
+          <HomeOutline className='nav-icon'/>
+        </Link>
+        </li>
 
-    <li className='col-sm-3'>
-      <Link activeClassName='active' to='/'>
-      <HomeOutline className='nav-icon'/>
-    </Link>
-    </li>
-
-    <li className='col-sm-3'>
-      <Link activeClassName='active' to='/Contact'><Message className='nav-icon'/></Link>
-    </li>
-
-    <li className='col-sm-3'>
-      <Link activeClassName='active' to='/FilterRecipes'><Search className='nav-icon'/></Link>
-    </li>
-  </ul>
-
-
-</div>
+        <li className='col-lg-3 col-md-4 col-xsm-6'>
+          <Link activeClassName='active' to='/FilterRecipes'><Search className='nav-icon'/></Link>
+        </li>
+      </ul>
+    </div>{/*row*/}
+  </div>//container
 )
 
 export default Nav;
