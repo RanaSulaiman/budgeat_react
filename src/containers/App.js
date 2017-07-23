@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import Foundation from 'react-foundation'
 import PropTypes from 'prop-types'
 
 import {
@@ -17,6 +16,8 @@ import Home from '../components/Home'
 import Contact from '../components/Contact'
 import FilterRecipes from '../components/FilterRecipes'
 import RecipeInfo from '../components/RecipeInfo'
+import Footer from '..//components/Footer'
+
 
 import RailsApi from '../utils/RailsApi'
 
@@ -42,8 +43,7 @@ class App extends Component {
                 <Route exact path='/Recipe/:recipe_id' component={RecipeInfo} />
 							</Switch>
 
-              <footer className='footer'>Footer
-              </footer>
+              <Footer />
 						</div>
 					</Router>
 		);

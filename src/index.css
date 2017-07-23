@@ -70,7 +70,6 @@ li{
 .header {
   height: 70px;
   background-color: green;
-
 }
 
 .footer {
@@ -88,7 +87,11 @@ li{
   height: 60px;
   width: 100%;
 }
+.footer-icon {
+  color: purple;
+  font-size: 2em;
 
+}
 
 /*Main search page styling*/
 
@@ -120,36 +123,6 @@ li{
 .filter{
   border: none;
 }
-
-/*.pag-num-disp {
-  border: solid;
-  display: flex;
-  flex-direction: row;
-  display: inline-block;
-
-}*/
-
-/*Pagination*/
-/*#page-numbers {
-  list-style: none;
-  display: flex;
-}*/
-
-/*#page-numbers {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: justify;
-}*/
-
-/*#page-numbers > li {
-  margin-right: 0.3em;
-  color: blue;
-  user-select: none;
-  cursor: pointer;
-  height: 30px;
-  width:30px;
-  border: solid;
-}*/
 
 
 /*RecipeInfo Styling*/
