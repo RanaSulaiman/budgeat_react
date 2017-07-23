@@ -74,13 +74,13 @@ li{
 
 .footer {
    /*just for demo */
-  background-color: #F8F8F8;
+  background-color: #CC95C0;
+  background-color: #E1F5C4;
+
+
   border-top: 1px solid #E7E7E7;
   text-align:center;
-  padding:20px;
-
-  /*just for demo */
-
+  padding-top:16px;
   position: absolute;
   margin-bottom:-60px;
   bottom: 0;
@@ -88,9 +88,20 @@ li{
   width: 100%;
 }
 .footer-icon {
-  color: purple;
+  /*color: #5FC3E4;*/
+  color: #FF8008;
+  color: #8E54E9;
+
   font-size: 2em;
 
+}
+#social{
+  float: right;
+padding-bottom: 10px;
+
+}
+#disclaimer{
+  float: left;
 }
 
 /*Main search page styling*/
@@ -156,7 +167,7 @@ li{
   text-align: justify;
   width:  ;
   background-color: #E5E5BE;
-  padding: 10px;
+  padding: 20px;
 }
 
 td {
