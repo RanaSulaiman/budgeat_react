@@ -11,7 +11,7 @@ class RecipeTable extends Component {
     return (
     <div className='container'>
       <ul className='row'>
-        {!this.props.loading && this.props.recipes.length === 0 ? <div>no results</div> : null}
+        {!this.props.loading && this.props.recipes.length === 0 ? <div id='no-result'>Sorry, No Results Match your Search</div> : null}
           {this.props.recipes.map((recipe)=>
             <li className='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
               <RecipeRow key={recipe.recipe_id} {...recipe}/>
