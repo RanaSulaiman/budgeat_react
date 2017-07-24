@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-//react-icons
-import Leaf from 'react-icons/lib/fa/leaf';
-
-import Stopwatch from 'react-icons/lib/ti/stopwatch';
-
 // images
 import wheat from '../images/wheat.png'
 import dairy from '../images/dairy.png'
@@ -86,8 +81,6 @@ class RecipeInfo extends Component {
 
     return(
         <div className='container'>
-          {/* <h1>Detail for recipe # {recipe_id}</h1> */}
-          {/* <h1>{this.state.recipe.sourceName}</h1> */}
             <h1 className ='info-title'>{this.state.recipe.title}</h1>
 
             <div className='row'>
@@ -135,7 +128,7 @@ class RecipeInfo extends Component {
             <table className='table'>
               <tbody>
                 <tr>
-                  <td className="col-md-4 col-xs-6"><strong>Number of Servings: </strong></td>
+                  <td className='col-md-4 col-xs-6'><strong>Number of Servings: </strong></td>
                   <td>{this.state.recipe.servings}</td>
                 </tr>
                 <tr>
@@ -153,9 +146,6 @@ class RecipeInfo extends Component {
               <h3>Instructions</h3>
               <p className='info-instructions'>{this.state.recipe.instructions}</p>
             </div>
-
-            {/* </div> */}
-
         </div>//container
     );
   }

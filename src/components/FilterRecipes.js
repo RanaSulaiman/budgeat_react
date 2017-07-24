@@ -16,7 +16,6 @@ import {
 } from 'react-router-dom'
 
 import FilterableRecipeTable from './FilterableRecipeTable'
-
 import {fetchRailsData} from '../utils/RailsApi'
 
 class FilterRecipes extends Component {
@@ -78,8 +77,6 @@ class FilterRecipes extends Component {
   }
 
   clickPreviousPage(){
-    // let page = Number(event.target.page);
-    // var page = this.props.currentPage;
     var page = this.state.currentPage;
 
     var prevPage = page - 1;
@@ -146,16 +143,8 @@ class FilterRecipes extends Component {
     this.setState({currentPage: 1, filteredRecipes: filteredList, lastPage: Math.ceil(filteredList.length / this.state.recipesPerPage)})
   }
 
-  // this.setState({lastPage: Math.ceil(filteredRecipes.length / recipesPerPage)});
-
-
 	render() {
-    // console(this.state.allRecipes)
-    // console.log("xxxxxxxxxxxxx");
     const { filteredRecipes, currentPage, recipesPerPage } = this.state;
-    // const lastPage = this.state.lastPage;
-
-    // Was here
 
     // Logic for displaying current recipes
     const indexOfLastRecipe = currentPage * recipesPerPage;

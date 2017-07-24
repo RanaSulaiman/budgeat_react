@@ -2,12 +2,10 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import Home from './Home'
-import Contact from './Contact'
 
 //main navigation
 import Search from 'react-icons/lib/fa/search';
 import HomeOutline from 'react-icons/lib/ti/home-outline';
-// import Message from 'react-icons/lib/md/message'
 
 //Logo
 import AttachMoney from 'react-icons/lib/md/attach-money'

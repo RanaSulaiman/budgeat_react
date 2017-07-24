@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 export const Home = () => (
   <div className='container home'>
     <h1>A word from Author</h1>

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import Foundation from 'react-foundation'
-
 
 class ButtonDishType extends Component {
   constructor(props) {

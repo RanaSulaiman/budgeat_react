@@ -4,9 +4,6 @@ html {
 }
 
 body {
-  /*margin: 15px;
-  padding: 15px;*/
-  /*min-height: 100%;*/
   font-family: Kavivanar ;
   font-size: 1.8em;
 }
@@ -45,7 +42,6 @@ h3 {
   font-size: 2em;
 }
 
-
 .image {
   height: 200px;
   width: 200px;
@@ -55,28 +51,11 @@ h3 {
 li{
   list-style: none;
 }
+
 #title {
   height: 70px;
   width : 200px;
   text-align: center;
-  /*text-align: center;*/
-}
-
-
-/*.icons{
-  padding-top: 50px;
-}*/
-
-/*.active {
-  font-weight: bold;
-}*/
-
-header {
-  /*width: 100%;*/
-  /*display: block;*/
-  /*position: fixed;*/
-  /*height: 70px;*/
-  background-color: green;
 }
 
 header.floating-header {
@@ -91,6 +70,7 @@ header.floating-header {
   height: 70px;
   z-index: 2;
 }
+
 #for-fixed-header{
   height: 50px;
 }
@@ -124,6 +104,7 @@ margin-right: 20px;
 padding-bottom: 10px;
 
 }
+
 #disclaimer{
   float: left;
 }
@@ -132,8 +113,6 @@ padding-bottom: 10px;
 
 /*FilterableRecipeTable*/
 .all-buttons{
-  /*display: flex;*/
-  /*position: fixed;*/
   border-bottom-width:2px;
   border-bottom-color:black;
   border-bottom-style: solid;
@@ -141,10 +120,6 @@ padding-bottom: 10px;
   padding-bottom:45px;
   text-align: center;
 }
-/*.fixing {
-  display: block;
-  position: relative;
-}*/
 
 .search-all{
   margin-top: 30px;
@@ -164,7 +139,6 @@ padding-bottom: 10px;
   border: none;
 }
 
-
 /*RecipeInfo Styling*/
 .recipe-img{
   height: 380px;
@@ -182,9 +156,11 @@ padding-bottom: 10px;
   color: #ff512f;
   color: #fc354c;
 }
+
 .info-icons-spcing{
   height: 50px;
 }
+
 .info-title{
   height: 50px;
   text-align: left;

@@ -2,7 +2,6 @@
 // Gets called by: FilterableRecipeTable
 // Calls: RecipeRow
 
-
 import React, { Component } from 'react'
 import RecipeRow from './RecipeRow'
 
@@ -22,7 +21,6 @@ class RecipeTable extends Component {
     </div>
     );
   }
-
 
 }
 

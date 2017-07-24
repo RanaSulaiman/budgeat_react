@@ -17,7 +17,6 @@ class FilterableRecipeTable extends Component {
 	render() {
 		return (
 				<div className='container'>
-					{/* <div className='fixing'> */}
 					<div  className={'row','all-buttons'}>
 						<div className='col-lg-3 col-md-4 col-sm-6'><ButtonDishType  onDishTypeFilterSelect={this.props.onDishTypeFilterSelect}/></div>
 	        	<div className='col-lg-3 col-md-4 col-sm-6'><ButtonCost  onCostFilterSelect={this.props.onCostFilterSelect}/>
@@ -28,12 +27,9 @@ class FilterableRecipeTable extends Component {
 						</div>
 
 					</div>{/* row */}
-				{/* </div> */}
-
 
 					<div className='row'>
 						<div className='col search-all'>
-
 			        <RecipeTable recipes={this.props.recipes} dishtypeFilterText={this.props.dishtypeFilterText} costFilterText={this.props.costFilterText}
 							timeFilterText={this.props.timeFilterText}
 							intoleranceFilterText={this.props.intoleranceFilterText} loading={this.props.loading} />

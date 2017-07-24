@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-// import {Link} from 'react-router-dom'
 
 // react-icons
 import FacebookSquare from 'react-icons/lib/fa/facebook-square';
 import GithubSquare from 'react-icons/lib/fa/github-square';
-// import Mail from 'react-icons/lib/ti/mail';
-// import MailRead from 'react-icons/lib/go/mail-read';
-// import Mention from 'react-icons/lib/go/mention';
 import FaEnvelopeSquare from 'react-icons/lib/fa/envelope-square'
 import FaTwitterSquare from  'react-icons/lib/fa/twitter-square'
 
