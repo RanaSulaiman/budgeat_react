@@ -29,12 +29,12 @@ class App extends Component {
           <div >
 						 <div /*className='container'*/>
               <div /*className='row'*/ >
-                <header className='header'>
+                <header className='floating-header'>
                   <Nav/>
                 </header>
               </div>{/*row*/}
 
-
+              <p id="for-fixed-header"></p>
 
 							<Switch className='row'>
 								<Route exact path='/' component={Home} />

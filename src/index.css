@@ -71,15 +71,15 @@ li{
   font-weight: bold;
 }*/
 
-.header {
+header {
   /*width: 100%;*/
   /*display: block;*/
   /*position: fixed;*/
-  height: 70px;
+  /*height: 70px;*/
   background-color: green;
 }
 
-/*header.floating-header {
+header.floating-header {
   display: block;
   position: fixed;
   background-color: green;
@@ -90,14 +90,10 @@ li{
   right: 0;
   height: 70px;
   z-index: 2;
-}*/
-
-
-
-/*.page-header{
-  position: fixed;
-
-}*/
+}
+#for-fixed-header{
+  height: 50px;
+}
 
 .footer {
    /*just for demo */
@@ -136,8 +132,8 @@ padding-bottom: 10px;
 
 /*FilterableRecipeTable*/
 .all-buttons{
-  /*display: block;
-  position: fixed;*/
+  /*display: flex;*/
+  /*position: fixed;*/
   border-bottom-width:2px;
   border-bottom-color:black;
   border-bottom-style: solid;
@@ -145,10 +141,9 @@ padding-bottom: 10px;
   padding-bottom:45px;
   text-align: center;
 }
-/*#display {
+/*.fixing {
   display: block;
-  position: fixed;
-  z-index: 2
+  position: relative;
 }*/
 
 .search-all{
