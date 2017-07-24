@@ -16,13 +16,14 @@ h3 {
 .nav-icon{
   color: orange;
   font-size: 2em;
+  /*spacing between nav*/
+  margin-left: 20px;
 }
 .nav-display {
   display: flex;
   float: right;
   padding: 15px;
   margin-right: 20px;
-  /*letter-spacing: .1em;*/
 }
 
 .logo-display{
@@ -76,11 +77,7 @@ header.floating-header {
 }
 
 .footer {
-   /*just for demo */
-  background-color: #CC95C0;
   background-color: #E1F5C4;
-
-
   border-top: 1px solid #E7E7E7;
   text-align:center;
   padding-top:16px;
@@ -92,21 +89,24 @@ header.floating-header {
 }
 .footer-icon {
   /*color: #5FC3E4;*/
-  color: #FF8008;
+  /*color: #FF8008;*/
   color: #8E54E9;
-
   font-size: 2em;
 
 }
 #social{
 float: right;
-margin-right: 20px;
-padding-bottom: 10px;
+ /*social media vertical center*/
+margin-top: -5px;
+/*padding-top: -25px;*/
+margin-right: 25px;
+/*margin-bottom: -10px;*/
 
 }
 
 #disclaimer{
   float: left;
+  margin-left: 25px;
 }
 
 /*Main search page styling*/

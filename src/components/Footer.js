@@ -11,7 +11,7 @@ export const Footer = () => (
 
     <div className='container footer'>
       <div className='row'>
-        <div className='col-xsm-6 vcenter' id='social'>
+        <div className='col-xsm-6' id='social'>
           <section id='social-link'>
             <a href='https://facebook.com/' target= '_blank'><FacebookSquare className='footer-icon'/></a>
 
