@@ -11,7 +11,7 @@ export const Footer = () => (
 
     <div className='container footer'>
       <div className='row'>
-        <div className='col-md-2 col-xsm-6 vcenter' id='social'>
+        <div className='col-xsm-6 vcenter' id='social'>
           <section id='social-link'>
             <a href='https://facebook.com/' target= '_blank'><FacebookSquare className='footer-icon'/></a>
 
@@ -25,8 +25,8 @@ export const Footer = () => (
 
         </div>
 
-        <div className='col-md-4 col-xsm-6' id='disclaimer'>
-          <section>&copy; 2017 by Rana Sulaiman, All rights reserved.</section>
+        <div className='col-xsm-6' id='disclaimer'>
+          <section>&copy; 2017 by Rana Sulaiman</section>
         </div>
       </div>{/*row*/}
 
