@@ -1,4 +1,22 @@
+# README
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
+## Environment Set Up on OSX
+### Install React
+In your terminal run `$ npm install -g create-react-app`.
+
+### Create a Project Folder. Clone this Repo into it and Install the Following Libraries
+
+#### `npm install --save prop-types`
+#### `npm install --save react-router-dom`
+#### `npm install --save axios`
+#### `npm install --save react-icons `
+#### `npm install --save react-bootstrap`
+
+### Start your Local Server by Running: `$ npm start`
+### Open the Project in your Browser at [http://localhost:3000](http://localhost:3000)
+
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
@@ -1760,7 +1778,7 @@ If you’re using [Apache HTTP Server](https://httpd.apache.org/), you need to c
     RewriteRule ^ index.html [QSA,L]
 ```
 
-It will get copied to the `build` folder when you run `npm run build`. 
+It will get copied to the `build` folder when you run `npm run build`.
 
 If you’re using [Apache Tomcat](http://tomcat.apache.org/), you need to follow [this Stack Overflow answer](https://stackoverflow.com/a/41249464/4878474).
 
