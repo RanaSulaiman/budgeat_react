@@ -12,16 +12,17 @@ export const Home = () => (
     </p>
 
     <p className='text-justify'>
-      Price per serving is an estimated price based on average costs. Since grocery prices do range  from region to region and store to store.
+      - Price per serving is an estimated price based on average costs. Since grocery prices do range  from region to region and store to store.
     </p>
 
-    <p>
-      Data Source <br/>
+    <p className='text-justify'>
+      - I consumed <a href='https://market.mashape.com/spoonacular/recipe-food-nutrition' target= '_blank'><strong>Mashape API</strong></a> to build the backend data for this application.
+
     </p>
 
 
     <p className='text-justify'>
-      Have a healthy delecious meal !!
+      <i>Have a healthy delecious meal !!</i>
     </p>
 
 </div>
