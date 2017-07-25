@@ -85,7 +85,7 @@ header.floating-header {
   position: absolute;
   margin-bottom:-60px;
   bottom: 0;
-  height: 60px;
+  height: 70px;
   width: 100%;
 }
 .footer-icon {
@@ -97,11 +97,7 @@ header.floating-header {
 }
 #social{
 float: right;
- /*social media vertical center*/
-margin-top: -5px;
-/*padding-top: -25px;*/
 margin-right: 25px;
-/*margin-bottom: -10px;*/
 
 }
 
@@ -163,7 +159,7 @@ margin-right: 25px;
 }
 
 .info-icons-spcing{
-  height: 50px;
+  height: 60px;
 }
 
 .info-title{

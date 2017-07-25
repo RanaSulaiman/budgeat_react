@@ -9,8 +9,8 @@ import FaTwitterSquare from  'react-icons/lib/fa/twitter-square'
 
 export const Footer = () => (
 
-    <div className='container footer'>
-      <div className='row'>
+    <div className='container-fluid footer'>
+      <div className='row-fluid'>
         <div className='col-6' id='social'>
           <section id='social-link'>
             <a href='https://facebook.com/' target= '_blank'><FacebookSquare className='footer-icon'/></a>
