@@ -10,7 +10,6 @@ import {
   Redirect
 } from 'react-router-dom'
 
-
 import {browserHistory} from 'react-router'
 
 import Nav from '../components/Nav'
