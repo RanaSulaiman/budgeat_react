@@ -17,21 +17,22 @@ h3 {
   color: orange;
   font-size: 2em;
   /*spacing between nav*/
-  margin-left: 20px;
+  /*margin-left: 20px;*/
+  margin-right: 40px;
+
 }
 .nav-display {
   display: flex;
   float: right;
-  padding: 15px;
-  margin-right: 20px;
+  padding-top: 15px;
+  margin-right: -10px;
 }
 
 .logo-display{
   display: flex;
   float: left;
-  padding-top: 15px;
-  margin-left: 30px;
-  text-align: center;
+  padding-top: 10px;
+  margin-left: 10px;
 }
 
 .logo-icon{
