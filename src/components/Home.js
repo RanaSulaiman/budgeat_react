@@ -15,15 +15,15 @@ export const Home = () => (
       Price per serving is an estimated price based on average costs. Since grocery prices do range  from region to region and store to store.
     </p>
 
+    <p>
+      Data Source <br/>
+    </p>
+
+
     <p className='text-justify'>
       Have a healthy delecious meal !!
     </p>
 
-    <p>
-      Special Thanks: <br/>
-        My Family
-        My instructors, Charles, Chris and Kari
-    </p>
 </div>
 
 )
