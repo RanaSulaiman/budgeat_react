@@ -16,19 +16,19 @@ export const Nav = () => (
   <div className='container-fluid'>
     <div className='row'>
       <div className='logo-display'>
-        <p className='col-xsm-2'><AttachMoney className='logo-icon'/></p>
-        <p className='col-xsm-2 app-name'>BudgEat</p>
-        <p className='col-xsm-2'><AttachMoney className='logo-icon'/></p>
+        <p className='col-2'><AttachMoney className='logo-icon'/></p>
+        <p className='col-2 app-name'>BudgEat</p>
+        <p className='col-2'><AttachMoney className='logo-icon'/></p>
       </div>
 
       <ul className='nav-display' >
-        <li className='col-xsm-2 text-center'>
+        <li className='col-2 text-center'>
           <Link activeClassName='active' to='/'>
           <HomeOutline className='nav-icon'/>
         </Link>
         </li>
 
-        <li className='col-xsm-2'>
+        <li className='col-2'>
           <Link activeClassName='active' to='/FilterRecipes'><Search className='nav-icon'/></Link>
         </li>
       </ul>
