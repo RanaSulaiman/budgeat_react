@@ -12,7 +12,7 @@ export const Home = () => (
     </p>
 
     <p className='text-justify'>
-      - Price per serving is an estimated price based on average costs. Since grocery prices do range  from region to region and store to store.
+      - Price per serving is an estimated price based on average costs since grocery prices do range from region to region and store to store.
     </p>
 
     <p className='text-justify'>
