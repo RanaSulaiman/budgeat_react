@@ -8,7 +8,7 @@ export const Home = () => (
     </p>
 
     <p className='text-justify'>
-       <strong>BudgEat </strong>is my capstone project for Ada Developers Academy, Cohort 7. Users of <strong>BudgEat </strong> not only have access to a variety of healthy, inexpensive, and easy to make recipes with cooking time and cost per serving accessible, they can search recipes by dish type, and food intolerances.
+       <strong><i>BudgEat </i></strong>is my capstone project for Ada Developers Academy, Cohort 7. Users of <strong><i>BudgEat </i></strong> not only have access to a variety of healthy, inexpensive, and easy to make recipes with cooking time and cost per serving accessible, they can search recipes by dish type, and food intolerances.
     </p>
 
     <p className='text-justify'>
