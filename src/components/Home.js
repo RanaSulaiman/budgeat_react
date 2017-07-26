@@ -16,7 +16,7 @@ export const Home = () => (
     </p>
 
     <p className='text-justify'>
-      - <a href='https://spoonacular.com/articles/how-to-use-the-spoonacular-recipe-saver-and-recipe-bookmarklet' target= '_blank'><strong>Spoonacular</strong></a> is the data source for this application.
+       <a href='https://spoonacular.com/articles/how-to-use-the-spoonacular-recipe-saver-and-recipe-bookmarklet' target= '_blank'><strong>- Spoonacular</strong></a> is the data source for this application.
     </p>
 
     <p className='text-justify'>
