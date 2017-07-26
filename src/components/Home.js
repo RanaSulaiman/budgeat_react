@@ -16,7 +16,7 @@ export const Home = () => (
     </p>
 
     <p className='text-justify'>
-      - I consumed <a href='https://market.mashape.com/spoonacular/recipe-food-nutrition' target= '_blank'><strong>Mashape API</strong></a> to build the backend data for this application.
+      - <a href='https://market.mashape.com/spoonacular/recipe-food-nutrition' target= '_blank'><strong>Mashape API</strong></a> is the data source for this application.
     </p>
 
     <p className='text-justify'>
