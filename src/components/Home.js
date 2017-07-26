@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 export const Home = () => (
-  <div className='container'>
+  <div className='container home-text'>
     <h1>A Word from Author</h1>
-    <p className='text-justify'>
+    <p className='text-justify '>
       The available data indicates that the great majority of low-income Americans not only understand the importance of healthy eating but also they want to know more about how to do so. The biggest barriers are cost and time.
     </p>
 
@@ -17,12 +17,10 @@ export const Home = () => (
 
     <p className='text-justify'>
       - I consumed <a href='https://market.mashape.com/spoonacular/recipe-food-nutrition' target= '_blank'><strong>Mashape API</strong></a> to build the backend data for this application.
-
     </p>
 
-
     <p className='text-justify'>
-      <i>Have a healthy delecious meal !!</i>
+      <i>Have a healthy delicious meal !!</i>
     </p>
 
 </div>
